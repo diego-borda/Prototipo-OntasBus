@@ -1,7 +1,16 @@
 document.getElementById("btn__registrarse").addEventListener("click", register);
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
-window.addEventListener("resize", anchopagina);
 document.getElementById("btn_Entrar").addEventListener("click", EntrarAMain);
+document.getElementById("btn__GuardarRegistro").addEventListener("click",RegistrarUsuario)
+window.addEventListener("resize", anchopagina);
+//Funcion para evitar entrar a la pagina principal nuevamente luego de dar flecha adelante
+// window.addEventListener('load', function() {
+//     // Reemplaza la URL actual en el historial del navegador con la URL de la página de inicio de sesión
+//     window.history.replaceState(null, 'Main.html', 'index.html');
+// });
+
+/*window.onpopstate = function(event) {window.location.href = "index.html";
+        history.pushState(null, null, "index.html");}*/
 
 
 //Declaracion de variables
@@ -12,7 +21,8 @@ var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
 var contenedor_todo = document.querySelector(".contenedor__todo");
 var main = document.querySelector(".main");
-
+//veamos si funciona con esto
+//var numEntradas=history.length;
 
 function anchopagina() {
     if (window.innerWidth > 850) {
@@ -77,8 +87,21 @@ function EntrarAMain(event) {
     var password = document.getElementById("txtContraseña").value;
     if (email !== "" && password !== "") {
         window.location.href = "Main.html";
+
     } else {
         alert("Por favor, completa todos los campos");
     }
 }
 
+function RegistrarUsuario(){
+    var nombre=document.getElementById("txtNombre").value;
+    var correo=document.getElementById("txtCorreoReg").value;
+    var usuario=document.getElementById("txtUsuario").value;
+    var contraseña=document.getElementById("txtContraseñaReg").value;
+
+    if(nombre !== "" && correo !== "" && usuario !=="" && contraseña !== "") {
+        alert("Usuario registrado correctamente")
+    }else{
+        alert("Por favor, completa todos los campos");
+    }
+}
