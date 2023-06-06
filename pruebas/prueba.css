@@ -166,3 +166,19 @@ transition: all .5s;
 .main_content .header .control-icon{
   color: white;
 }
+
+.social_media {
+  background-color: rgb(170, 206, 163);
+  position: fixed;
+  font-size: 25px;
+  font-weight: bolder;
+  bottom: 5px;
+  width: inherit;
+}
+.social_media a{
+  padding-right: 10%;
+}
+
+.social_media a:first-child{
+  margin-left: 15%;
+}
