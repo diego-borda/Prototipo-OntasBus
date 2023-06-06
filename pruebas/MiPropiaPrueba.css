@@ -228,12 +228,13 @@ transition: all .5s;
     margin-right: 0; /* Elimina el margen derecho del último elemento */
   }
   
-  .mpp_Menu ul a {
+  .mpp_Menu ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 20px;
     color: blue;
+    text-align: center;
   }
   
 
