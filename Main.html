@@ -1,28 +1,59 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="MiPropiaPrueba.css">
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <title>MiPrueba</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/estilosMain.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
 <body>
-    
-        <div id="mpp_Lateral" class="mpp_menuLateral">
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+    <div class="sidebar">
+      <header>OntasBus</header>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
+        <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
+        <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+        <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+      </ul>
+      <div class="social_media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="header">
+        <div class="control-icon">
+          <span>&#x21a6;</span>
+        </div>
+        <div>
+          <img src="../assets/images/BusCelesteDiv_192x192.png" height="50px" width="80px">
 
         </div>
-        <div class="mpp_Header_Contenido">
-            <header class="mpp_Header">
-
-            </header>
-            <div class="mppContenido">
-
-            </div>
+        <div class="Menu">
+          <ul>
+            <li><a href="#"><i class="fas fa-user"></i>Mi Perfil</a></li>
+            <li><a href="#"><i class="fas fa-address-book"></i>Contactanos</a></li>
+            <li><a href="#"><i class="fas fa-address-card"></i>Acerca de</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
+          </ul>
         </div>
-    
-    <script src="MiPropiaPrueba.js"></script>
+      </div>
+      <div class="info">
+        
+      </div>
+    </div>
+  
+  <script src="assets/js/scriptMain.js"></script>
 </body>
 
 </html>
