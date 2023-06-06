@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* .mppTodo {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border: 2px solid black;
+} */
+
+.mpp_menuLateral {
+    display: flex;
+    flex-direction: column;
+    width: 22%; /* Cambiado a 70%  para el @media le pondremos 60%*/
+    position: absolute; /* Cambiado a absolute */
+    left: 0; /* Agregado para mostrar inicialmente */
+    top: 0; /* Añadido para mantener el alineamiento */
+    height: 100%;
+    transition: left 300ms ease; /* Cambiado a left */
+    border: 2px solid black;
+    z-index: 2; /* Cambiado a 2 */
+    background-color: burlywood;
+}
+
+.oculto {
+    left: -70%; /* Cambiado a 0 para mostrar */
+}
+
+.mpp_Header_Contenido {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    height: 100%;
+    width: 100%;
+    position: relative; /* Agregado */
+    z-index: 1; /* Agregado */
+    border: 2px solid black;
+}
+
+
+.mpp_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 30px;
+    width: 97.2%;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.mppContenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 0;
+    height: 100%;
+    width: auto;
+}
+
+.mpp_menuLateral .mpp_control-icon_atras{
+    font-size: 30px;
+    align-content: center;
+    color: black;
+    padding: 5px 10px;
+    border: 2px solid rgb(255, 2, 2);
+    position: absolute;
+    z-index: 3;
+    margin-left:283px;
+  }
+  
+  .mpp_Header .mpp_control-icon_adelante{
+    font-size: 30px;
+    align-content: center;
+    align-items: center;
+    color: black;
+    padding: 5px 10px;
+    border: 2px solid rgb(255, 2, 2);
+    position: relative;
+    z-index: 1;
+    /*margin-left:208px ;*/
+  }
+
+  .mpp_Menu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    padding-inline: 15px;
+  }
+  
+  .mpp_Menu ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 2px solid black;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    position: relative;
+  }
+  
+  .mpp_Menu ul li:not(:first-child) {
+    margin-left: 30px; /* Agrega un margen izquierdo de 15px a todos los elementos, excepto al primero */
+  }
+  
+  .mpp_Menu ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+  }
+  
+  .mpp_Menu ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+ .fas{
+  font-size: 20px;
+  color: blue;
+  }
+ 
+
