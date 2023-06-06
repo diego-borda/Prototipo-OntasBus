@@ -1,14 +1,14 @@
 // Añadimos una clase "oculto" al menú lateral por defecto
- const menuLateral = document.getElementById("mpp_Lateral");
- const flechaAtras = document.querySelector(".fa-angle-double-left"); // Agrega un ID al botón
+//  const menuLateral = document.getElementById("mpp_Lateral");
+//  const flechaAtras = document.querySelector(".fa-angle-double-left"); // Agrega un ID al botón
 
- flechaAtras.addEventListener("click", function() {
-     menuLateral.classList.toggle("oculto");
- });
+//  flechaAtras.addEventListener("click", function() {
+//      menuLateral.classList.toggle("oculto");
+//  });
 
- const flechaAdelante = document.querySelector(".fa-angle-double-right").addEventListener("click",function(){
-  menuLateral.classList.remove("oculto")
- });
+//  const flechaAdelante = document.querySelector(".fa-angle-double-right").addEventListener("click",function(){
+//   menuLateral.classList.remove("oculto")
+//  });
 
 
 
