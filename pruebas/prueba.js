@@ -1,6 +1,5 @@
 
 
-
 /*botonFlecha.addEventListener("click", function(){
     var navbar = document.querySelector('.navbar');
     navbar.classList.toggle('open');

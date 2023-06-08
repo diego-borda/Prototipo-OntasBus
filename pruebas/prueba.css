@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  min-width: 550px;
 }
 
 * {
@@ -10,6 +11,11 @@ body {
   list-style: none;
   text-decoration: none;
 }
+
+.header .control-icon{
+  margin-left: 100px;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++ MENU LATERAL ++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -25,15 +31,13 @@ body {
 
 .sidebar header {
   height: 78px;
-  color: #80049c;
   background: #063146;
   user-select: none;
   background-image: url("../assets/images/BusCelesteDiv_192x192.png");
   background-size: 250px 78px;
   background-repeat: no-repeat;
   background-position: center;
-  backdrop-filter: blur(10px);
-  -webkit-mask-image: linear-gradient(to right, rgba(100, 66, 42, 0), rgb(64, 58, 58));
+  backdrop-filter: blur(100px);
 }
 
 .sidebar ul a {
@@ -88,23 +92,23 @@ label #cancel {
   transition: all .5s ease;
 }
 
-#check:checked ~ .sidebar{
+#check:checked~.sidebar {
   left: 0;
 }
 
-#check:checked ~ label #btn{
+#check:checked~label #btn {
   left: 250px;
   opacity: 0;
   pointer-events: none;
 }
 
 
-#check:checked ~ label #cancel{
+#check:checked~label #cancel {
   left: 195px
 }
 
-#check:checked ~ .main_content{
-margin-left: 250px;
+#check:checked~.main_content {
+  margin-left: 250px;
 }
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
@@ -119,11 +123,12 @@ margin-left: 250px;
   bottom: 5px;
   width: inherit;
 }
-.social_media a{
+
+.social_media a {
   padding-right: 10%;
 }
 
-.social_media a:first-child{
+.social_media a:first-child {
   margin-left: 15%;
 }
 
@@ -132,8 +137,8 @@ margin-left: 250px;
 /*++++++++++++++ MAIN CONTENT ++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 
-.main_content{
-transition: all .5s;
+.main_content {
+  transition: all .5s;
 }
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
@@ -144,10 +149,31 @@ transition: all .5s;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 30px;
+  padding: 25px 30px;
   width: 97.2%;
   border-bottom: 1px solid #e0e4e8;
 }
+
+
+/*------------*/
+/*--LogoTexto_H--*/
+/*------------*/
+.LogoyTexto {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+}
+
+.Logo {
+  padding-right: 10px;
+}
+
+.Texto {
+  text-align: left;
+  padding-top: 10px;
+}
+
 
 /*------------*/
 /*--- MENU_H ---*/
@@ -172,7 +198,7 @@ transition: all .5s;
 
 }
 
-.Menu ul li{
+.Menu ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,11 +206,13 @@ transition: all .5s;
 }
 
 .Menu ul li:not(:first-child) {
-  margin-left: 30px; /* Agrega un margen izquierdo de 15px a todos los elementos, excepto al primero */
+  margin-left: 30px;
+  /* Agrega un margen izquierdo de 15px a todos los elementos, excepto al primero */
 }
 
 .Menu ul li:last-child {
-  margin-right: 0; /* Elimina el margen derecho del último elemento */
+  margin-right: 0;
+  /* Elimina el margen derecho del último elemento */
 }
 
 .Menu ul li a {
@@ -193,17 +221,16 @@ transition: all .5s;
   font-size: 20px;
   color: blue;
   text-align: center;
-  overflow: hidden;
   max-width: auto;
 }
 
-.Menu .fa{
+.Menu .fa {
   display: flex;
   flex-direction: column;
   font-weight: bold;
 }
 
-.main_content .header .control-icon{
+.main_content .header .control-icon {
   color: white;
 }
 
@@ -212,7 +239,7 @@ transition: all .5s;
 /*------ CONTENIDO ------*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 
-.info .Contenido{
+.info .Contenido {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -222,5 +249,82 @@ transition: all .5s;
   width: auto;
 }
 
+/*++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++ RESPONSIVE +++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++*/
 
+@media (max-width: 1000px) {
 
+  label #btn {
+    left: 20px;
+    font-size: 25px;
+    transition: all .5s;
+  }
+
+  .header {
+    padding: 25px 30px;
+    width: 90%;
+    border-bottom: 1px solid #e0e4e8;
+  }
+
+  .header .control-icon{
+    margin-left: 30px;
+    transition: all 1s;
+  }
+
+  .Texto{
+    margin-top: -10px;
+  }
+
+  .Texto h1 {
+    text-align: left;
+    font-size: 25px;
+    transition: all 1s;
+  }
+
+  .Texto p {
+    text-align: left;
+    font-size: 14px;
+    transition: all 1s;
+  }
+
+  .Menu {
+    padding-inline: 5px;
+    margin-right: 5px;
+    justify-content: space-between;
+  }
+
+  .Menu ul{
+    justify-content: space-between;
+
+  }
+
+  .Menu ul li {
+    margin-right: 5px;
+    transition: all 1s;
+  }
+  
+  .Menu ul li:not(:first-child) {
+    margin-left: 18px;
+    /* Agrega un margen izquierdo de 15px a todos los elementos, excepto al primero */
+  }
+  
+  .Menu ul li:last-child {
+    margin-right: 0;
+    /* Elimina el margen derecho del último elemento */
+  }
+
+  .Menu ul li > a {
+    font-weight: 0px;
+    font-size-adjust: 0px;
+    font-size: 0px;
+    max-width: 100%;
+    transition: all 0.8s;
+  }
+
+  .Menu ul li a i{
+    font-size: 20px;
+    color: blue;
+  }
+
+}
