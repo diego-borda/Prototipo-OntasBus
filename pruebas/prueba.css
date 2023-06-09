@@ -163,10 +163,13 @@ label #cancel {
   flex-direction: row;
   position: relative;
   z-index: 2;
+
 }
 
 .Logo {
-  padding-right: 10px;
+  padding-right: 10px;  
+  width: fit-content;
+  height: fit-content;
 }
 
 .Texto {
@@ -190,7 +193,7 @@ label #cancel {
   display: flex;
   flex-direction: row;
   width: 100%;
-  border: 2px solid black;
+
   justify-content: space-between;
   height: 100%;
   align-items: center;
