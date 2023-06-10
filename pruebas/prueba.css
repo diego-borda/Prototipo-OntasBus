@@ -187,13 +187,13 @@ label #cancel {
   justify-content: space-between;
   margin-right: 10px;
   padding-inline: 15px;
+  position: relative; /*Aqui est no estaba*/
 }
 
 .Menu ul {
   display: flex;
   flex-direction: row;
   width: 100%;
-
   justify-content: space-between;
   height: 100%;
   align-items: center;
@@ -237,6 +237,59 @@ label #cancel {
   color: white;
 }
 
+/*-------------------*/
+/*---- SubMenus -----*/
+/*-------------------*/
+
+
+/*++++++++++++++*/
+/*Submenu_Cuenta*/
+/*++++++++++++++*/
+.Menu .Submenu_Cuenta {
+  top: 95%;
+  display:flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
+.Menu .SubMenu_History {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  left: 80%;
+  top: 116%;
+  width: max-content;
+  height: auto;
+  padding: 10px;
+  align-items: flex-start;
+  justify-content: left;
+  line-height: 30px;
+}
+
+.Menu .SubMenu_History li{
+  line-height: 30px;
+}
+
+.Menu .SubMenu_History li a{
+  display: inline-block;
+  text-align: left;
+  line-height: 20px;
+}
+
+.Menu .SubMenu_History li:last-child{
+margin-left: auto;
+padding-top: 10px;
+}
+
+
 
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 /*------ CONTENIDO ------*/
@@ -266,7 +319,7 @@ label #cancel {
 
   .header {
     padding: 25px 30px;
-    width: 90%;
+    width: 95%;
     border-bottom: 1px solid #e0e4e8;
   }
 
@@ -330,4 +383,13 @@ label #cancel {
     color: blue;
   }
 
+  .Menu .Submenu_Cuenta {
+    top: 90%;
+  }
+
+  .Menu .SubMenu_History {
+
+    top: 130%;
+
+  }
 }

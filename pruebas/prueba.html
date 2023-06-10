@@ -35,16 +35,31 @@
       </div>
       <div class="LogoyTexto">
         <div class="Logo">
-        <img src="../assets/images/BusCelesteDiv_192x192.png" height="75px" width="120px">
+          <img src="../assets/images/BusCelesteDiv_192x192.png" height="75px" width="120px">
         </div>
         <div class="Texto">
           <h1>BusGO</h1>
-          <p>Tu viaje sin complicaciones empieza aqui <i class="far fa-hand-point-down" style="color:dodgerblue"></i></p>
+          <p>Tu viaje sin complicaciones empieza aqui <i class="far fa-hand-point-down" style="color:dodgerblue"></i>
+          </p>
         </div>
       </div>
       <div class="Menu">
         <ul>
-          <li><a href="#"><i class="fas fa-user"></i>Mi Cuenta</a></li>
+          <li><a href="#" id="miCuentaLink"><i class="fas fa-user"></i>Mi Cuenta</a><i class="fas fa-caret-down"></i>
+            <div class="Submenu_Cuenta">
+              <ul>
+                <li><a href="#"><i class="fas fa-user-edit"></i>Perfil</a></li>
+                <li><a href="#"><i class="fas fa-user-plus"></i>Mas Usuarios</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i>Notificaciones</a></li>
+                <li><a href="#" id="historialLink"><i class="fas fa-history"></i>Historial</a><i class="fas fa-caret-down" style="margin-left: 5px;"></i></i>
+                  <ul class="SubMenu_History">
+                    <li><a href="#"><i class="fas fa-list" style="padding-right: 8px;"></i>Actividad</a></li>
+                    <li><a href="#"><i class="fas fa-money-bill-alt" style="padding-right: 8px;"></i>Transacciones</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#"><i class="fas fa-address-card"></i>Acerca de</a></li>
           <li><a href="#"><i class="fa fa-question-circle"></i>Ayuda</a></li>
           <li><a href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
