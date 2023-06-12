@@ -16,10 +16,14 @@
   <div class="sidebar">
     <header></header>
     <ul>
-      <li><a href="#"><i class="fas fa-directions"></i>Direcciones</a></li>
-      <li><a href="#"><i class="fa fa-bus"></i>Buscar Ruta</a></li>
-      <li><a href="#"><i class="far fa-clock"></i>Alarmas</a></li>
-      <li><a href="#"><i class="	fas fa-info-circle"></i>Notificaciones</a></li>
+      <li><a href="#"><i class="fas fa-directions"></i>Direcciones <i class="fas fa-caret-right" style="margin-left: 38px;"></i></a>
+      <div class="Contenedor_Direcciones">
+
+      </div>
+      </li>
+      <li><a href="#"><i class="fa fa-bus"></i>Buscar Ruta <i class="fas fa-caret-right" style="margin-left: 33px;"></i></a></li>
+      <li><a href="#"><i class="far fa-clock"></i>Alarmas <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a></li>
+      <li><a href="#"><i class="fas fa-info-circle"></i>Notificaciones <i class="fas fa-caret-right" style="margin-left: 18px;"></i></a></li>
     </ul>
     <div class="social_media">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" style="color:blue"></i></a>
@@ -37,7 +41,7 @@
         <div class="Logo">
           <img src="../assets/images/BusCelesteDiv_192x192.png" height="75px" width="120px">
         </div>
-        <div class="Texto">
+        <div class="Texto" style="margin-right: 10px;">
           <h1>BusGO</h1>
           <p>Tu viaje sin complicaciones empieza aqui <i class="far fa-hand-point-down" style="color:dodgerblue"></i>
           </p>
@@ -45,6 +49,7 @@
       </div>
       <div class="Menu">
         <ul>
+          <!--------------------- SubMenu Cuenta --------------------->
           <li><a href="#" id="miCuentaLink"><i class="fas fa-user"></i>Mi Cuenta</a><i class="fas fa-caret-down"></i>
             <div class="Submenu_Cuenta">
               <ul>
@@ -53,6 +58,7 @@
                 <li><a href="#"><i class="fas fa-bell"></i>Notificaciones</a></li>
                 <li><a href="#" id="historialLink"><i class="fas fa-history"></i>Historial</a><i
                     class="fas fa-caret-down" style="margin-left: 5px;"></i></i>
+                  <!-------------- Sub_SubMenu Historial ------------->
                   <ul class="SubMenu_History">
                     <li><a href="#"><i class="fas fa-list" style="padding-right: 8px;"></i>Actividad</a></li>
                     <li><a href="#"><i class="fas fa-money-bill-alt" style="padding-right: 8px;"></i>Transacciones</a>
@@ -62,33 +68,41 @@
               </ul>
             </div>
           </li>
-          <li><a href="#"><i class="fas fa-address-card"></i>Acerca de</a><i class="fas fa-caret-down"></i>
-            <ul class="Submenu_AcercaDe">
-              <li><a href="#"><i></i>Sobre Nosotros</a></li>
-              <li><a href="#"><i></i>Contactanos</a></li>
-              <li><a href="#"><i></i>Paquetes</a></li>
-              <li><a href="#"><i></i>Promociones</a></li>
-              <li><a href="#"><i></i>Comentarios</a>
+          <!-------------------- SubMenu Acerca De ------------------->
+          <li><a href="#" id="AcercaDeLink"><i class="fas fa-address-card"></i>Acerca de</a><i class="fas fa-caret-down"></i>
+            <div class="Submenu_AcercaDe">
+            <ul>
+              <li><a href="#"><i class="fas fa-book-open"></i>Sobre Nosotros</a></li>
+              <li><a href="#"><i class="fas fa-envelope-open-text"></i>Contactanos</a></li>
+              <li><a href="#"><i class="fas fa-shopping-basket"></i>Paquetes</a></li>
+              <li><a href="#"><i class="fas fa-tags"></i>Promociones</a></li>
+              <li><a href="#" id="ComentariosLink"><i class="fas fa-comments"></i>Comentarios</a><i class="fas fa-caret-down"></i>
+                <!-------------- Sub_SubMenu Comentarios ------------->
                 <ul class="Submenu_Comentarios">
-                  <li><a href="#"><i></i>Comentanos</a></li>
-                  <li><a href="#"><i></i>Reportar Problemas</a></li>
+                  <li><a href="#"><i class="fas fa-comment-alt" style="padding-right: 8px;"></i>Comentanos</a></li>
+                  <li><a href="#"><i class="fas fa-bug" style="padding-right: 8px;"></i>Reportar Problemas</a></li>
                 </ul>
               </li>
             </ul>
+          </div>
           </li>
-          <li><a href="#"><i class="fa fa-question-circle"></i>Ayuda</a><i class="fas fa-caret-down"></i>
-            <ul class="Submenu_Ayuda">
-              <li><a href="#"><i></i></a>Preguntas Frecuentes</li>
-              <li><a href="#"><i></i></a>Tutoriales
+          <!---------------------- SubMenu Ayuda ---------------------->
+          <li><a href="#" id="AyudaLink"><i class="fa fa-question-circle"></i>Ayuda</a><i class="fas fa-caret-down"></i>
+            <div class="Submenu_Ayuda">
+            <ul>
+              <li><a href="#"><i class="fas fa-question"></i>Preguntas Frecuentes</a></li>
+              <li><a href="#"><i class="fas fa-headset"></i>Soporte Tecnico</a></li>
+              <li><a href="#" id="TutorialesLink"><i class="fas fa-eye"></i>Tutoriales</a><i class="fas fa-caret-down"></i>
+                <!--------------- Sub_SubMenu Tutoriales -------------->
                 <ul class="Submenu_Tutoriales">
-                  <li><a href="#"><i></i></a>Documentos</li>
-                  <li><a href="#"><i></i></a>Videos</li>
+                  <li><a href="#"><i class="fas fa-file-alt" style="padding-right: 8px;"></i>Documentos</a></li>
+                  <li><a href="#"><i class="fas fa-video" style="padding-right: 8px;"></i>Videos</a></li>
                 </ul>
               </li>
-              <li><a href=""><i></i>Soporte Tecnico</a></li>
             </ul>
+          </div>
           </li>
-          <li><a href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
+          <li id="CerrarSesion"><a href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
         </ul>
       </div>
     </div>
