@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  min-width: 550px;
+  min-width: 650px;
 }
 
 * {
@@ -13,7 +13,7 @@ body {
 }
 
 .header .control-icon{
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -22,21 +22,21 @@ body {
 
 .sidebar {
   position: fixed;
-  left: -250px;
-  width: 250px;
+  left: -27%;
+  width: 25%;
+  min-width: 300px;
   height: 100%;
   background: #042331;
   transition: all .5s ease;
 }
 
-.sidebar header {
-  height: 78px;
+.sidebar .Headerimage {
+  height: 100px;
   background: #063146;
   user-select: none;
   background-image: url("../assets/images/BusCelesteDiv_192x192.png");
-  background-size: 250px 78px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: center;
   backdrop-filter: blur(100px);
 }
 
@@ -74,7 +74,7 @@ label #cancel {
 }
 
 label #btn {
-  left: 40px;
+  left: 23px;
   top: 45px;
   font-size: 35px;
   color: white;
@@ -97,19 +97,158 @@ label #cancel {
 }
 
 #check:checked~label #btn {
-  left: 250px;
+  left: 25%;
   opacity: 0;
   pointer-events: none;
 }
 
-
 #check:checked~label #cancel {
-  left: 195px
+  left: 21%;
 }
 
 #check:checked~.main_content {
-  margin-left: 250px;
+  margin-left: 25%;
 }
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*----- Submenu Laterales -----*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+/*----- Direcciones -----*/
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+
+.list{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+}
+
+/*CHIVA POR AQUI*/
+/*-+-+//*-+-*+/*/
+.list__item{
+  width: 100%;
+  overflow: hidden;
+}
+
+.list__item--click a{
+  cursor: pointer;
+}
+
+.list__button{
+  display: flex;
+  gap: 0.5em;
+  width: 70%;
+  margin-left: 10px;
+}
+
+.Submenu__Direcciones{
+ display: flex;
+ flex-direction: column;
+  background-color: rgb(20, 99, 121);
+}
+
+.Selec_Puntos{
+display: flex;
+flex-direction: column;
+padding: 15px 10px 0px 10px;
+}
+
+.Selec_Puntos input{
+margin-bottom: 10px;
+line-height: 20px;
+}
+
+.Selec_Puntos #btn-Buscar{
+  width: 75px;
+  margin-bottom: 5px;
+  align-self: flex-end;
+  margin-right: 10px;
+  text-align: center;
+  border-color: aqua;
+  border-radius: 10%;
+  background-color: #1979a9;
+  color: white;
+  box-shadow: #e0e4e8;
+}
+
+.Submenu__Direcciones .iconoYboton {
+  border-bottom: 3px solid rgb(103, 58, 2);
+
+  }
+
+.Submenu__Direcciones .iconoYboton i{
+color: aqua;
+padding: 0 10px;
+font-size: 20px;
+cursor: auto;
+}
+
+.Submenu__Direcciones .iconoYboton #btn-ubicacionActual{
+  width: 81%;
+  margin-bottom: 5px;
+  align-self: flex-end;
+  margin-right: 10px;
+  text-align: center;
+  border-color: aqua;
+  background-color: #1979a9;
+  color: white;
+  box-shadow: #e0e4e8;
+  cursor: pointer;
+  }
+.textoYRecientes{
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+  .textoYRecientes #span1{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bolder;
+    background-color: rgb(199, 197, 197);
+    margin-bottom: 7px;
+  }
+
+  .Recientes{
+    border-top: 3px solid rgb(106, 106, 106);
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+.textoYRecientes .HeaderReciente span,.textoYRecientes .HeaderReciente span h3{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 10px;
+  justify-content: 5px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.Recientes .ContenidoReciente{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+/*----- Buscar Ruta -----*/
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+/*------- Alarmas -------*/
+/*+-+-+-+-+-+-+-+-+-+-+-+*/
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*----------- Footer ----------*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /*--------- Redes Soc ---------*/
@@ -121,7 +260,8 @@ label #cancel {
   font-size: 25px;
   font-weight: bolder;
   bottom: 5px;
-  width: inherit;
+  width: 25%;
+  min-width: 250px;
 }
 
 .social_media a {
@@ -149,8 +289,10 @@ label #cancel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 25px 30px;
-  width: 97.2%;
+  padding: 25px;
+  padding-right: 30px;
+  padding-left: 10px;
+  width: 98%;
   border-bottom: 1px solid #e0e4e8;
 }
 

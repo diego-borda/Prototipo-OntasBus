@@ -1,6 +1,6 @@
 /*------------------ Funcionalidad Mostrar y Ocultar SubMenus -------------------------*/
 
-/*------------------ Ocultar submenús por defecto -------------------*/
+/*------------------ Ocultar submenús HEADER por defecto -------------------*/
 document.querySelector(".Submenu_Cuenta").style.display = "none";
 document.querySelector(".SubMenu_History").style.display = "none";
 document.querySelector(".Submenu_AcercaDe").style.display = "none";
@@ -8,7 +8,7 @@ document.querySelector(".Submenu_Comentarios").style.display = "none";
 document.querySelector(".Submenu_Ayuda").style.display = "none";
 document.querySelector(".Submenu_Tutoriales").style.display = "none";
 
-/*--------------------- Ocultar todos los SubMenu al clickear -------------------------*/
+/*--------------------- Ocultar todos los SubMenu HEADER al clickear -------------------------*/
 document.addEventListener("click", function () {
   document.querySelector(".Submenu_Cuenta").style.display = "none";
   document.querySelector(".SubMenu_History").style.display = "none";
@@ -18,7 +18,7 @@ document.addEventListener("click", function () {
   document.querySelector(".Submenu_Tutoriales").style.display = "none";
 });
 
-//---------------- Obtener los elementos de los enlaces de los menús --------------------
+//---------------- Obtener los elementos de los enlaces de los menús HEADER --------------------
 var miCuentaLink = document.getElementById("miCuentaLink");
 var historialLink = document.getElementById("historialLink");
 var AcercaDeLink = document.getElementById("AcercaDeLink");
@@ -86,3 +86,34 @@ document.getElementById("CerrarSesion").addEventListener("click", function () {
     window.location.href = "../Login.html";
   }
 });
+
+/*----------------- Funcionalidad de Mostrar y Ocultar Submenus Laterales ---------------*/
+
+/*----------------------- Ocultar los submenu por defecto ------------------------*/
+document.querySelector(".Submenu__Direcciones").style.display = "none";
+document.querySelector(".textoYRecientes").style.display = "none";
+
+/*---------------------- Mostrar los submenu -----------------------*/
+document.querySelector(".list__button--clickdir").addEventListener("click",function(){
+  if (document.querySelector(".Submenu__Direcciones").style.display="none"){
+  document.querySelector(".Submenu__Direcciones").style.display="flex";
+  document.querySelector(".Submenu__Direcciones").style["flex-direction"]="column";
+  document.getElementById("flechaDerecha").classList.remove("fa-caret-right");
+  document.getElementById("flechaDerecha").classList.toggle("fa-caret-down");
+  document.getElementById("flechaDerecha").style.transition="all .5s ease";
+  }
+  else if (document.querySelector(".Submenu__Direcciones").style.display !="none") {
+    document.querySelector(".Submenu__Direcciones").style.display="none";
+    document.getElementById("flechaDerecha").classList.remove("fa-caret-down");
+    document.getElementById("flechaDerecha").classList.add("fa-caret-right");
+    document.getElementById("flechaDerecha").style.transition="all .5s ease";
+    document.querySelector(".textoYRecientes").style.display = "none";
+  }
+  
+})
+
+document.getElementById("btn-Buscar").addEventListener("click",function(){
+  document.querySelector(".textoYRecientes").style.display = "flex";
+  document.querySelector(".textoYRecientes").style["flex-direction"]="column";
+})
+

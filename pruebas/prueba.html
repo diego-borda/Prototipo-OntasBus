@@ -13,17 +13,64 @@
     <i class="fas fa-bars" id="btn"></i>
     <i class="fas fa-times" id="cancel"></i>
   </label>
-  <div class="sidebar">
-    <header></header>
-    <ul>
-      <li><a href="#"><i class="fas fa-directions"></i>Direcciones <i class="fas fa-caret-right" style="margin-left: 38px;"></i></a>
-      <div class="Contenedor_Direcciones">
-
-      </div>
+   <div class="sidebar"> <!--este viene siendo el nav -->
+    <header class="Headerimage"></header>
+    <!-- ----------------------- Direcciones ----------------------- -->
+    <ul class="list">
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--clickdir">
+          <a href="#" class="nav__link"><i class="fas fa-directions"></i>Direcciones 
+          <i id="flechaDerecha" class="fas fa-caret-right" style="margin-left: 38px;"></i></a>
+        </div>
+        <div class="Submenu__Direcciones"> <!-- list__show -->
+          <!-- ------Punto Inicial y Final -------- -->
+          <div class="Selec_Puntos">
+            <input type="text" placeholder="Ubicacion inicial">
+            <input type="text" placeholder="Destino">
+            <button id="btn-Buscar">Buscar</button>
+          </div>
+          <!-- ---- Ubicacion Actual IcoYBoton ---- -->
+          <div class="iconoYboton">
+             <i class="fas fa-compass"></i>
+             <button id="btn-ubicacionActual">Ubicacion actual</button>
+          </div>
+          
+          <!-- ------------- Rutas Sugeridas ------------ -->
+          <div class="textoYRecientes">
+            <span id="span1">Rutas Sugeridas</span>
+            <div class="Recientes">
+              <div class="Reciente_Unitario">
+                <header class="HeaderReciente">
+                  <span class="fas fa-bus-alt"><h3><strong>104, 123</strong></h3><span class="fas fa-stopwatch">15 min aprox.</span></span>
+                </header>
+                <div class="ContenidoReciente">
+                  <label for="">De: <strong> UNI-RUPAP</strong></label>
+                  <label for="">Hasta: <strong> Mercado Roberto Huembes</strong></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </li>
-      <li><a href="#"><i class="fa fa-bus"></i>Buscar Ruta <i class="fas fa-caret-right" style="margin-left: 33px;"></i></a></li>
-      <li><a href="#"><i class="far fa-clock"></i>Alarmas <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a></li>
-      <li><a href="#"><i class="fas fa-info-circle"></i>Notificaciones <i class="fas fa-caret-right" style="margin-left: 18px;"></i></a></li>
+
+      <!-- ----------------------- Buscar Ruta ----------------------- -->
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--click">
+          <a href="#"><i class="fa fa-bus"></i>Buscar Ruta 
+          <i class="fas fa-caret-right" style="margin-left: 33px;"></i></a>
+        </div>
+      </li>
+
+      <!-- ------------------------- Alarmas -------------------------- -->
+      <li class="list__item list__item--click">
+        <div class="list__button list__button--click">
+          <a href="#"><i class="far fa-clock"></i>Alarmas 
+          <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
+        </div>
+      </li>
+    
+
     </ul>
     <div class="social_media">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" style="color:blue"></i></a>
@@ -107,7 +154,7 @@
       </div>
     </div>
     <div class="Contenido">
-      <img src="../assets/images/Busestuani.png" height="800px" alt="200px">
+
     </div>
   </div>
 
