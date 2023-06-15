@@ -22,7 +22,7 @@ body {
 
 .sidebar {
   position: fixed;
-  left: -27%;
+  left: -25%;
   width: 25%;
   min-width: 300px;
   height: 100%;
@@ -140,14 +140,18 @@ label #cancel {
 .list__button{
   display: flex;
   gap: 0.5em;
-  width: 70%;
-  margin-left: 10px;
+  width: 100%;
+  margin-left: -10px;
 }
 
 .Submenu__Direcciones{
- display: flex;
- flex-direction: column;
+ display:none;
   background-color: rgb(20, 99, 121);
+  transition: all 0.9s ease;
+}
+
+#flechaDerecha{
+  transition: transform 0.5s ease;
 }
 
 .Selec_Puntos{
@@ -239,8 +243,101 @@ cursor: auto;
 /*----- Buscar Ruta -----*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 
+.submenuBuscar{
+  display: none;
+
+}
+
+.submenuBuscar #txtBusqueda{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin:0px;
+  background-color: rgb(20, 99, 121);
+}
+
+.submenuBuscar #txtBusqueda input{
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 10px;
+  max-height: 25px;
+}
+
+.submenuBuscar #txtBusqueda a{
+  width: 20px;
+  padding: 0;
+  margin-right: -50px;
+  margin-left: 10px;
+}
 
 
+#Resultados #spanResult{
+  display: none;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+  background-color: rgb(199, 197, 197);
+  margin-bottom: 7px; 
+}
+
+.DireccionBus .PuntosRuta{
+  background-color: white;
+}
+
+.DireccionBus .Opcion1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 25px;
+  align-content: flex-start;
+  background-color: bisque;
+
+}
+
+.DireccionBus .Opcion1 .color{
+margin-top: 5px;
+}
+
+.DireccionBus .Opcion2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 25px;
+  align-content: flex-start;
+  background-color: bisque;
+  margin-bottom: 10px;
+}
+
+.DireccionBus .Opcion2 .color{
+margin-top: 5px;
+}
+
+.PuntosRuta{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.PuntosRuta .Parada{
+  display: flex;
+  background-color: white;
+  margin-left: 10px;
+  padding-top: 20px;
+  border-right: gray 2px solid;
+  width: 65%;
+}
+
+.PuntosRuta .ProxBus{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  text-align: center;
+  margin-right: 0;
+  height:60px;
+}
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 /*------- Alarmas -------*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
@@ -256,11 +353,11 @@ cursor: auto;
 
 .social_media {
   background-color: rgb(170, 206, 163);
-  position: fixed;
+  position: absolute;
   font-size: 25px;
   font-weight: bolder;
   bottom: 5px;
-  width: 25%;
+  width: 100%;
   min-width: 250px;
 }
 
@@ -399,6 +496,7 @@ cursor: auto;
   width: auto;
   height: auto;
   text-align: left;
+  z-index: 2;
 }
 
 /*++++++++++++++*/
@@ -419,6 +517,7 @@ cursor: auto;
   align-items: flex-start;
   justify-content: left;
   line-height: 30px;
+  z-index: 2;
 }
 
 .Menu .SubMenu_History li{
@@ -451,6 +550,7 @@ padding-top: 10px;
   width: auto;
   height: auto;
   text-align: left;
+  z-index: 2;
 }
 
 /*++++++++++++++*/
@@ -471,6 +571,7 @@ padding-top: 10px;
   align-items: flex-start;
   justify-content: left;
   line-height: 30px;
+  z-index: 2;
 }
 
 .Menu .Submenu_Comentarios li{
@@ -503,6 +604,7 @@ padding-top: 10px;
   width: auto;
   height: auto;
   text-align: left;
+  z-index: 2;
 }
 
 /*++++++++++++++*/
@@ -523,6 +625,7 @@ padding-top: 10px;
   align-items: flex-start;
   justify-content: left;
   line-height: 30px;
+  z-index: 2;
 }
 
 .Menu .Submenu_Tutoriales li{
@@ -544,14 +647,18 @@ padding-top: 10px;
 /*------ CONTENIDO ------*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 
-.info .Contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid black;
-  padding: 0;
+#Contenido {
+
+  width: 100%;
   height: 100%;
   width: auto;
+  
+}
+
+#Contenido #Mapa{
+  width: 100%;
+  height: 80vh;
+  z-index: 0;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -564,6 +671,16 @@ padding-top: 10px;
     left: 20px;
     font-size: 25px;
     transition: all .5s;
+  }
+
+  .sidebar {
+
+    left: -31%;
+
+  }
+
+  #check:checked~.main_content {
+    margin-left: 31%;
   }
 
   .header {

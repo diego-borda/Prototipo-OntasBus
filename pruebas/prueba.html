@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="prueba.css">
   <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
@@ -13,35 +17,37 @@
     <i class="fas fa-bars" id="btn"></i>
     <i class="fas fa-times" id="cancel"></i>
   </label>
-   <div class="sidebar"> <!--este viene siendo el nav -->
+  <div class="sidebar"> <!--este viene siendo el nav -->
     <header class="Headerimage"></header>
     <!-- ----------------------- Direcciones ----------------------- -->
     <ul class="list">
       <li class="list__item list__item--click">
-        <div class="list__button list__button--clickdir">
-          <a href="#" class="nav__link"><i class="fas fa-directions"></i>Direcciones 
-          <i id="flechaDerecha" class="fas fa-caret-right" style="margin-left: 38px;"></i></a>
+        <div class="list__button list__button--clickdirDirec">
+          <a href="#" class="nav__link"><i class="fas fa-directions"></i>Direcciones
+            <i id="flechaDerecha" class="fas fa-caret-right" style="margin-left: 38px;"></i></a>
         </div>
         <div class="Submenu__Direcciones"> <!-- list__show -->
           <!-- ------Punto Inicial y Final -------- -->
           <div class="Selec_Puntos">
-            <input type="text" placeholder="Ubicacion inicial">
-            <input type="text" placeholder="Destino">
+            <input id="UbicacionI" type="text" placeholder="Ubicacion inicial">
+            <input id="Destino" type="text" placeholder="Destino">
             <button id="btn-Buscar">Buscar</button>
           </div>
           <!-- ---- Ubicacion Actual IcoYBoton ---- -->
           <div class="iconoYboton">
-             <i class="fas fa-compass"></i>
-             <button id="btn-ubicacionActual">Ubicacion actual</button>
+            <i class="fas fa-compass"></i>
+            <button id="btn-ubicacionActual">Ubicacion actual</button>
           </div>
-          
+
           <!-- ------------- Rutas Sugeridas ------------ -->
           <div class="textoYRecientes">
             <span id="span1">Rutas Sugeridas</span>
             <div class="Recientes">
               <div class="Reciente_Unitario">
                 <header class="HeaderReciente">
-                  <span class="fas fa-bus-alt"><h3><strong>104, 123</strong></h3><span class="fas fa-stopwatch">15 min aprox.</span></span>
+                  <span class="fas fa-bus-alt">
+                    <h3><strong>104, 123</strong></h3><span class="fas fa-stopwatch">15 min aprox.</span>
+                  </span>
                 </header>
                 <div class="ContenidoReciente">
                   <label for="">De: <strong> UNI-RUPAP</strong></label>
@@ -50,26 +56,59 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </li>
 
       <!-- ----------------------- Buscar Ruta ----------------------- -->
       <li class="list__item list__item--click">
-        <div class="list__button list__button--click">
-          <a href="#"><i class="fa fa-bus"></i>Buscar Ruta 
-          <i class="fas fa-caret-right" style="margin-left: 33px;"></i></a>
+        <div class="list__button list__button--clickBusc">
+          <a href="#"><i class="fa fa-bus"></i>Buscar Ruta
+            <i id="flechaDer" class="fas fa-caret-right" style="margin-left: 33px;"></i></a>
+        </div>
+
+        <div class="submenuBuscar">
+          <div id="txtBusqueda">
+            <input id="txtBuscar" type="text" placeholder="Busque una ruta ...">
+            <a href="#" class="fas fa-search" id="Busqueda"></a>
+          </div>
+          <div id="Resultados">
+            <span id="spanResult">Resultados</span>
+            <div class="DireccionBus">
+              <span class="Opcion1">
+                <strong>De:</strong> Hialeah <strong>A:</strong> Mercado Mayoreo
+                <div class="color" style="background-color: red; border-radius: 100%; height: 15px; width: 15px;"></div>
+              </span>
+              <span class="Opcion2">
+                <strong>De:</strong> Mercado Mayoreo <strong>A:</strong> Hialeah
+                <div class="color"
+                  style="background-color: rgb(4, 195, 4); border-radius: 100%; height: 15px; width: 15px;"></div>
+              </span>
+            </div>
+            <div class="PuntosRuta">
+              <div class="Parada">
+                <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                  <strong>Barrio Hialeah</strong>
+                </span>
+              </div>
+              <div class="ProxBus">
+                <span>Prox. Bus: </span>
+                <span style="color:red" ;>0 min</span>
+                <span style="color: rgb(4, 195, 4);">10 min</span>
+              </div>
+            </div>
+          </div>
         </div>
       </li>
 
       <!-- ------------------------- Alarmas -------------------------- -->
       <li class="list__item list__item--click">
         <div class="list__button list__button--click">
-          <a href="#"><i class="far fa-clock"></i>Alarmas 
-          <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
+          <a href="#"><i class="far fa-clock"></i>Alarmas
+            <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
         </div>
       </li>
-    
+
 
     </ul>
     <div class="social_media">
@@ -116,49 +155,56 @@
             </div>
           </li>
           <!-------------------- SubMenu Acerca De ------------------->
-          <li><a href="#" id="AcercaDeLink"><i class="fas fa-address-card"></i>Acerca de</a><i class="fas fa-caret-down"></i>
+          <li><a href="#" id="AcercaDeLink"><i class="fas fa-address-card"></i>Acerca de</a><i
+              class="fas fa-caret-down"></i>
             <div class="Submenu_AcercaDe">
-            <ul>
-              <li><a href="#"><i class="fas fa-book-open"></i>Sobre Nosotros</a></li>
-              <li><a href="#"><i class="fas fa-envelope-open-text"></i>Contactanos</a></li>
-              <li><a href="#"><i class="fas fa-shopping-basket"></i>Paquetes</a></li>
-              <li><a href="#"><i class="fas fa-tags"></i>Promociones</a></li>
-              <li><a href="#" id="ComentariosLink"><i class="fas fa-comments"></i>Comentarios</a><i class="fas fa-caret-down"></i>
-                <!-------------- Sub_SubMenu Comentarios ------------->
-                <ul class="Submenu_Comentarios">
-                  <li><a href="#"><i class="fas fa-comment-alt" style="padding-right: 8px;"></i>Comentanos</a></li>
-                  <li><a href="#"><i class="fas fa-bug" style="padding-right: 8px;"></i>Reportar Problemas</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+              <ul>
+                <li><a href="#"><i class="fas fa-book-open"></i>Sobre Nosotros</a></li>
+                <li><a href="#"><i class="fas fa-envelope-open-text"></i>Contactanos</a></li>
+                <li><a href="#"><i class="fas fa-shopping-basket"></i>Paquetes</a></li>
+                <li><a href="#"><i class="fas fa-tags"></i>Promociones</a></li>
+                <li><a href="#" id="ComentariosLink"><i class="fas fa-comments"></i>Comentarios</a><i
+                    class="fas fa-caret-down"></i>
+                  <!-------------- Sub_SubMenu Comentarios ------------->
+                  <ul class="Submenu_Comentarios">
+                    <li><a href="#"><i class="fas fa-comment-alt" style="padding-right: 8px;"></i>Comentanos</a></li>
+                    <li><a href="#"><i class="fas fa-bug" style="padding-right: 8px;"></i>Reportar Problemas</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </li>
           <!---------------------- SubMenu Ayuda ---------------------->
           <li><a href="#" id="AyudaLink"><i class="fa fa-question-circle"></i>Ayuda</a><i class="fas fa-caret-down"></i>
             <div class="Submenu_Ayuda">
-            <ul>
-              <li><a href="#"><i class="fas fa-question"></i>Preguntas Frecuentes</a></li>
-              <li><a href="#"><i class="fas fa-headset"></i>Soporte Tecnico</a></li>
-              <li><a href="#" id="TutorialesLink"><i class="fas fa-eye"></i>Tutoriales</a><i class="fas fa-caret-down"></i>
-                <!--------------- Sub_SubMenu Tutoriales -------------->
-                <ul class="Submenu_Tutoriales">
-                  <li><a href="#"><i class="fas fa-file-alt" style="padding-right: 8px;"></i>Documentos</a></li>
-                  <li><a href="#"><i class="fas fa-video" style="padding-right: 8px;"></i>Videos</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+              <ul>
+                <li><a href="#"><i class="fas fa-question"></i>Preguntas Frecuentes</a></li>
+                <li><a href="#"><i class="fas fa-headset"></i>Soporte Tecnico</a></li>
+                <li><a href="#" id="TutorialesLink"><i class="fas fa-eye"></i>Tutoriales</a><i
+                    class="fas fa-caret-down"></i>
+                  <!--------------- Sub_SubMenu Tutoriales -------------->
+                  <ul class="Submenu_Tutoriales">
+                    <li><a href="#"><i class="fas fa-file-alt" style="padding-right: 8px;"></i>Documentos</a></li>
+                    <li><a href="#"><i class="fas fa-video" style="padding-right: 8px;"></i>Videos</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </li>
           <li id="CerrarSesion"><a href="#"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a></li>
         </ul>
       </div>
     </div>
-    <div class="Contenido">
-
+    <div id="Contenido">
+      <div id="Mapa">
+        
+      </div>
     </div>
   </div>
 
   <script src="prueba.js"></script>
 </body>
+<!-- En el mapa al buscar con el submenu de Direcciones me deben aparecer encima de las
+rutas el tiempo de llegada a esa parada, si no se puede entonces  -->
 
 </html>
