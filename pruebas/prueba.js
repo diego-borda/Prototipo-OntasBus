@@ -1,7 +1,13 @@
 /*------------------------------------- Mapa ----------------------------------------------*/
+/*--------------- Creacion de mapa ---------------*/
 var mapa=L.map("Mapa").setView([12.154372,-86.273],15)
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(mapa);
 // Segun el video esto queda hasta ... .png?,{}) --> asi
+
+/*-------------------- Creando marcadores -------------------*/
+var marcador=L.marker()
+
+
 
 /*------------------ Funcionalidad Mostrar y Ocultar SubMenus -------------------------*/
 
@@ -9,7 +15,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar',
 document.querySelector(".Submenu_Cuenta").style.display = "none";
 document.querySelector(".SubMenu_History").style.display = "none";
 document.querySelector(".Submenu_AcercaDe").style.display = "none";
-document.querySelector(".Submenu_Comentarios").style.display = "none";
+// document.querySelector(".Submenu_Comentarios").style.display = "none";
+document.querySelector(".Submenu_Comentanos").style.display = "none";
+document.querySelector(".Submenu_ReportarProblemas").style.display = "none";
 document.querySelector(".Submenu_Ayuda").style.display = "none";
 document.querySelector(".Submenu_Tutoriales").style.display = "none";
 
@@ -18,7 +26,9 @@ document.addEventListener("click", function () {
   document.querySelector(".Submenu_Cuenta").style.display = "none";
   document.querySelector(".SubMenu_History").style.display = "none";
   document.querySelector(".Submenu_AcercaDe").style.display = "none";
-  document.querySelector(".Submenu_Comentarios").style.display = "none";
+  // document.querySelector(".Submenu_Comentarios").style.display = "none";
+  document.querySelector(".Submenu_Comentanos").style.display = "none";
+  document.querySelector(".Submenu_ReportarProblemas").style.display = "none";
   document.querySelector(".Submenu_Ayuda").style.display = "none";
   document.querySelector(".Submenu_Tutoriales").style.display = "none";
 });
@@ -29,6 +39,7 @@ var historialLink = document.getElementById("historialLink");
 var AcercaDeLink = document.getElementById("AcercaDeLink");
 var ComentariosLink = document.getElementById("ComentariosLink");
 var AyudaLink = document.getElementById("AyudaLink");
+var ReportarLink = document.getElementById("ReportarProblemasLink");
 var TutorialesLink = document.getElementById("TutorialesLink");
 
 
@@ -60,13 +71,29 @@ AcercaDeLink.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-/*---------------- Sub_SubMenu Comentarios ------------------*/
-ComentariosLink.addEventListener("click", function (event) {
-  event.preventDefault();
-  document.querySelector(".Submenu_Comentarios").style.display = "flex";
-  document.querySelector(".Submenu_Comentarios").style["flex-direction"] = "column";
-  event.stopPropagation();
+/*---------------- Sub_SubMenu ReportarProblemas ------------------*/
+ReportarLink.addEventListener("click", function (event) {
+event.preventDefault();
+document.querySelector(".Submenu_ReportarProblemas").style.display = "flex";
+document.querySelector(".Submenu_ReportarProblemas").style["flex-direction"] = "column";
+event.stopPropagation();
 });
+
+/*---------------- Sub_SubMenu Comentanos ------------------*/
+ComentariosLink.addEventListener("click", function (event) {
+event.preventDefault();
+ document.querySelector(".Submenu_Comentanos").style.display = "flex";
+document.querySelector(".Submenu_Comentanos").style["flex-direction"] = "column";
+ event.stopPropagation();
+});
+
+/*---------------- Sub_SubMenu Comentarios ------------------*/
+// ComentariosLink.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   document.querySelector(".Submenu_Comentarios").style.display = "flex";
+//   document.querySelector(".Submenu_Comentarios").style["flex-direction"] = "column";
+//   event.stopPropagation();
+// });
 
 /*------------------------------- SubMenu Ayuda -----------------------------*/
 AyudaLink.addEventListener("click", function (event) {
