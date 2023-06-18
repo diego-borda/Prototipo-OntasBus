@@ -184,12 +184,5 @@ document.querySelector(".list__button--clickBusc").addEventListener("click", fun
   }
 });
 
-document.getElementById("Busqueda").addEventListener("click", function () {
-  if(document.getElementById("txtBuscar").value.trim()!==""){
-    document.getElementById("Resultados").style.display = "flex";
-    document.getElementById("Resultados").style["flex-direction"] = "column";
-  }else{
-    alert("Debe llenar el cuadro de busqueda");
-  }
 
-})
+
