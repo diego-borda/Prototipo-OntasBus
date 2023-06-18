@@ -1691,3 +1691,5 @@ document.getElementById("Busqueda").addEventListener("click", function () {
   
   })
 
+//   Funcion para eliminar del mapa
+//   L.geoJSON(ParadasRuta104MM_H__GEOJsonLine,{}).removeFrom(mapa)
