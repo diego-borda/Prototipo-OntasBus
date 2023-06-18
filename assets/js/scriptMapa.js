@@ -1665,8 +1665,33 @@ var ParadasRuta104H_MM__GEOJsonLine = {
     ]
 }
 
+/*------------------------ Funcion de Ubicacion Actual ---------------------*/
+var btnUbicacionActual = document.getElementById("btn-ubicacionActual");
 
-/*------------------------ Funcion Buscar Ruta ---------------------- */
+btnUbicacionActual.addEventListener("click", function() {
+  var UbicacionInicial=document.getElementById("UbicacionI");
+  UbicacionInicial.value="Mi Ubicacion Actual";
+
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(function (position) {
+  //     var latitud = position.coords.latitude;
+  //     var longitud = position.coords.longitude;
+  //     console.log(latitud)
+  //     console.log(longitud)
+
+      // Crea un marcador en tu ubicación y añádelo al mapa
+      var marker = L.marker([12.109951220893143 /*latitud*/, -86.2246329946382 /*longitud*/]).addTo(mapa);
+      marker.bindPopup("¡Estás aquí!").openPopup();
+      // Vuela hacia tu ubicación con una animación
+      mapa.flyTo([12.109951220893143, -86.2246329946382], 13);
+  //   });
+  // } else {
+  //   console.log('La geolocalización no es compatible en este navegador.');
+  // }
+
+})
+
+/*--------------------------- Funcion Buscar Ruta ------------------------- */
 
 document.getElementById("Busqueda").addEventListener("click", function () {
     if(document.getElementById("txtBuscar").value.trim()!==""){
