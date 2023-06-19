@@ -1672,6 +1672,8 @@ btnUbicacionActual.addEventListener("click", function() {
   var UbicacionInicial=document.getElementById("UbicacionI");
   UbicacionInicial.value="Mi Ubicacion Actual";
 
+  // var latitud = geoplugin_latitude();
+  // var longitud = geoplugin_longitude();
   // if (navigator.geolocation) {
   //   navigator.geolocation.getCurrentPosition(function (position) {
   //     var latitud = position.coords.latitude;
@@ -1683,7 +1685,7 @@ btnUbicacionActual.addEventListener("click", function() {
       var marker = L.marker([12.109951220893143 /*latitud*/, -86.2246329946382 /*longitud*/]).addTo(mapa);
       marker.bindPopup("¡Estás aquí!").openPopup();
       // Vuela hacia tu ubicación con una animación
-      mapa.flyTo([12.109951220893143, -86.2246329946382], 13);
+      mapa.flyTo([12.109951220893143/*latitud*/, -86.2246329946382/*longitud*/], 13);
   //   });
   // } else {
   //   console.log('La geolocalización no es compatible en este navegador.');
