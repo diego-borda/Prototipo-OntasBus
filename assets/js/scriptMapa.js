@@ -1714,7 +1714,7 @@ markerRUPAP.bindPopup("Villa Progreso/RUPAP").openPopup();
 
 // Captar las coordenadas al dar click en un punto
 
-myMap.on('click', function(event) {
+mapa.on('click', function(event) {
   var latitud = event.latlng.lat;
   var longitud = event.latlng.lng;
   console.log('Coordenadas: ' + latitud + ', ' + longitud);
