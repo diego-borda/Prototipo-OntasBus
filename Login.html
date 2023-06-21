@@ -43,9 +43,14 @@
                     <input id="txtNombre" type="text" placeholder="Nombre Completo" required>
                     <input id="txtCorreoReg" type="text" placeholder="Correo Electronico"required>
                     <input type="text" placeholder="Celular" required>
-                    <input id="txtUsuario" type="text" placeholder="Usuario" required>
-                    <input id="txtContraseñaReg" type="password" placeholder="Contraseña" required>
-                    <button type="submit" id="btn__GuardarRegistro">Registrarse</button>
+                    <input id="txtUsuario" type="text" placeholder="Usuario" autocomplete="off" value="" required>
+                    <input id="txtContraseñaReg" type="password" placeholder="Contraseña" autocomplete="off" value=" " required>
+                    <div class="check">
+                        <input type="checkbox" id="checkbox" onclick="toggleButton()" style="width: 20px; height: 20px;"/>
+                        <label for="checkbox" style="font-size: small;">Aceptas nuestros <a href="">términos y condiciones</a>, y la <a href="">política de privacidad</a></label>
+                        <br>
+                    </div>
+                    <button type="submit" id="btn__GuardarRegistro" disabled>Registrarse</button>
                 </form>
             </div>
         </div>

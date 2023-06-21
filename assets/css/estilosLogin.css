@@ -76,24 +76,37 @@ main {
 
 
 /*Formularios*/
+
+.contenedor__login-register:first-child {
+    top: -235px;
+}
+
 .contenedor__login-register {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -185px;
+    top: -105px;
     left: 10px;
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .contenedor__login-register form {
     width: 100%;
-    padding: 80px 20px;
+    padding: 30px 20px;
     background: white;
     position: absolute;
     border-radius: 20px;
 
+}
+
+.contenedor__login-register .formulario__login{
+    margin-top: -150px;
+}
+
+.contenedor__login-register .formulario__register{
+    margin-top: -150px;
 }
 
 .contenedor__login-register form h2 {
@@ -127,12 +140,42 @@ main {
 .formulario__login {
     opacity: 1;
     display: block;
+    height: max-content;
 }
 
 .formulario__register {
     display: none;
-    ;
 }
+
+.check{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.check #checkbox{
+    margin-right: 8px;
+}
+
+.check label{
+    margin-top: 12px;
+}
+
+#btn__GuardarRegistro:disabled {
+    background-color: gray;
+    color: red;
+  }
+  
+  #btn__GuardarRegistro:not(:disabled) {
+    background: rgb(6, 115, 170);
+    color: white;
+  }
+  
+  #btn__GuardarRegistro:not(:disabled) :hover {
+    background: white;
+    color: dodgerblue
+  }
+
 
 /*Trabajando en el responsive design*/
 
@@ -155,7 +198,7 @@ main {
 
     /*Formularios*/
     .contenedor__login-register {
-        top: -10px;
+        top: 200px;
         left: -5px;
         margin: auto;
     }
@@ -164,4 +207,11 @@ main {
         position: relative;
     }
 
+    .contenedor__login-register .formulario__register{
+        margin-top: -250px;
+    }
+
+    .contenedor__login-register .formulario__login{
+        margin-top: -250px;
+    }
 }

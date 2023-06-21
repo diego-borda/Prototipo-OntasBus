@@ -93,6 +93,17 @@ function EntrarAMain(event) {
     }
 }
 
+function toggleButton() {
+    const checkbox = document.getElementById("checkbox");
+    const submitButton = document.getElementById("btn__GuardarRegistro");
+  
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  }
+
 function RegistrarUsuario(){
     var nombre=document.getElementById("txtNombre").value;
     var correo=document.getElementById("txtCorreoReg").value;
