@@ -1665,34 +1665,127 @@ var Ruta104H_MM__GEOJsonLine = {
   ]
 }
 
-/*------------------------ Funcion de Ubicacion Actual ---------------------*/
-var btnUbicacionActual = document.getElementById("btn-ubicacionActual");
-
-btnUbicacionActual.addEventListener("click", function () {
-  var UbicacionInicial = document.getElementById("UbicacionI");
-  UbicacionInicial.value = "Mi Ubicacion Actual";
-
-  // var latitud = geoplugin_latitude();
-  // var longitud = geoplugin_longitude();
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(function (position) {
-  //     var latitud = position.coords.latitude;
-  //     var longitud = position.coords.longitude;
-  //     console.log(latitud)
-  //     console.log(longitud)
-
-  // Crea un marcador en tu ubicación y añádelo al mapa
-  var marker = L.marker([12.109951220893143 /*latitud*/, -86.2246329946382 /*longitud*/]).addTo(mapa);
-  marker.bindPopup("¡Estás aquí!").openPopup();
-  // Vuela hacia tu ubicación con una animación
-  mapa.flyTo([12.110089,/*latitud*/-86.224683/*longitud*/], 13);
-  //   });
-  // } else {
-  //   console.log('La geolocalización no es compatible en este navegador.');
-  // }
-
-})
-
+//Creacion del objeto paradas104
+var Paradas104 = [
+  { id: 1, nombre: "Hialeah", longitud: 12.11642726703837, latitud: -86.28300547599794 },
+  { id: 1.5, nombre: "Hialeah", longitud: 12.116495479446856, latitud: -86.28283917903902 },
+  { id: 2, nombre: "Rosa de Saron", longitud: 12.114900353946929, latitud: -86.283016204834 },
+  { id: 2.5, nombre: "Rosa de Saron", longitud: 12.114900353946929, latitud: -86.2829089164734 },
+  { id: 3, nombre: "Entrada", longitud: 12.114108034776866, latitud: -86.28289818763734 },
+  { id: 3.5, nombre: "Entrada", longitud: 12.114160506317788, latitud: -86.2828177213669 },
+  { id: 4, nombre: "Benito Juarez", longitud: 12.112428940021351, latitud: -86.28282845020296 },
+  { id: 4.5, nombre: "Benito Juarez", longitud: 12.112439434396377, latitud: -86.28272652626038 },
+  { id: 5, nombre: "Salida a Pista Suburbana", longitud: 12.109301518917617, latitud: -86.28212034702302 },
+  { id: 5.5, nombre: "Salida a Pista Suburbana", longitud: 12.109317260664376, latitud: -86.28200769424438 },
+  { id: 6, nombre: "Pulperia La Pista", longitud: 12.109118720667315, latitud: -86.28329515457155 },
+  ////// La rara
+  { id: 6.5, nombre: "Cementerio El Carmen", longitud: 12.108788143544986, latitud: -86.2844216823578 },
+  { id: 7, nombre: "Barrio Memorial Sandino", longitud: 12.110393800020173, latitud: -86.28684103488924 },
+  { id: 7.5, nombre: "Barrio Memorial Sandino", longitud: 12.110414788929763, latitud: -86.28703415393831 },
+  { id: 8, nombre: "Bosques de Nejapa", longitud: 12.113195804859995, latitud: -86.28663182258606 },
+  { id: 8.5, nombre: "Bosques de Nejapa", longitud: 12.113216793549338, latitud: -86.28686785697938 },
+  { id: 9, nombre: "Hospedaje San Francisco", longitud: 12.11707563957869, latitud: -86.28404617309572 },
+  { id: 9.5, nombre: "Hospedaje San Francisco", longitud: 12.116928720842745, latitud: -86.28440022468568 },
+  { id: 10, nombre: "Farmacia El Valle", longitud: 12.119247928592413, latitud: -86.28343999385835 },
+  { id: 10.5, nombre: "Farmacia El Valle", longitud: 12.11936336374566, latitud: -86.28363847732545 },
+  { id: 11, nombre: "Universidad del Valle", longitud: 12.124138137686298, latitud: -86.28342390060425 },
+  { id: 11.5, nombre: "Universidad del Valle", longitud: 12.124578881741225, latitud: -86.28368139266969 },
+  { id: 12, nombre: "Rotonda El Periodista", longitud: 12.12678783799531, latitud: -86.28207206726074 },
+  { id: 12.5, nombre: "Rotonda El Periodista", longitud: 12.127149874210957, latitud: -86.28224372863771 },
+  /////// Otra rara
+  { id: 13.5, nombre: "Edificios El Centro", longitud: 12.128813135725334, latitud: -86.28118693828583 },
+  { id: 14, nombre: "Edificio Naciones Unidas", longitud: 12.130581323495607, latitud: -86.28045201301576 },
+  /////// Otra rara
+  { id: 15, nombre: "LAFISE Plaza España", longitud: 12.133083544299721, latitud: -86.28108501434328 },
+  /////// Otra rara
+  { id: 15.5, nombre: "Plaza España", longitud: 12.133513352301168, latitud: -86.28141760826111 },
+  { id: 16, nombre: "PriceSmart", longitud: 12.13588933994748, latitud: -86.27685248851778 },
+  ////// Otra rara
+  { id: 16.5, nombre: "Comercial Mabale", longitud: 12.136114724783464, latitud: -86.2769490480423 },
+  { id: 17, nombre: "Mirador Tiscapa", longitud: 12.140157122106093, latitud: -86.26772224903108 },
+  { id: 17.5, nombre: "Mirador Tiscapa", longitud: 12.140172846383807, latitud: -86.26793682575226 },
+  { id: 18, nombre: "El Redentor", longitud: 12.14415105881639, latitud: -86.26709997653963 },
+  { id: 18.5, nombre: "El Redentor", longitud: 12.144224437670614, latitud: -86.26674592494966 },
+  { id: 19, nombre: "Gancho de Camino", longitud: 12.14422257246731, latitud: -86.26158535480499 },
+  { id: 19.5, nombre: "Gancho de Camino", longitud: 12.145029738534742, latitud: -86.2608289718628 },
+  { id: 20, nombre: "Bar Santo Domingo", longitud: 12.140389806133856, latitud: -86.25965416431428 },
+  ////// Otra rara
+  { id: 20.5, nombre: "Colegio Publico España", longitud: 12.138529095008517, latitud: -86.25899970531465 },
+  { id: 21, nombre: "Colegio Cristo Rey", longitud: 12.136891699700229, latitud: -86.25871539115906 },
+  ////// Otra rara
+  { id: 21.5, nombre: "Clinica Ma. Auxiliadora", longitud: 12.136299410636637, latitud: -86.25838279724121 },
+  { id: 22, nombre: "Rotonda Cristo Rey", longitud: 12.134332404405187, latitud: -86.25802874565125 },
+  { id: 22.5, nombre: "Rotonda Cristo Rey", longitud: 12.134007428686292, latitud: -86.25777661800385 },
+  { id: 23, nombre: "Rotonda Santo Domingo", longitud: 12.131447712745745, latitud: -86.25729382038118 },
+  ////// Otra rara
+  { id: 24, nombre: "Colonia Maximo Jerez", longitud: 12.128155969260671, latitud: -86.25635504722597 },
+  { id: 24.5, nombre: "Colonia Maximo Jerez", longitud: 12.12895794235784, latitud: -86.25603318214418 },
+  { id: 25, nombre: "Altamira", longitud: 12.125459087372908, latitud: -86.25450432300569 },
+  { id: 25.5, nombre: "Altamira", longitud: 12.125480054232604, latitud: -86.25409126281738 },
+  { id: 26, nombre: "Farmacity Altamira", longitud: 12.122641832133464, latitud: -86.25288963317873 },
+  ////Todas raras
+  { id: 26.5, nombre: "CECA", longitud: 12.122657557444477, latitud: -86.25264286994936 },
+  { id: 27, nombre: "De mi tierra", longitud: 12.121068558793759, latitud: -86.25264286994936 },
+  { id: 27.5, nombre: "Credifast Altamira", longitud: 12.120607279871031, latitud: -86.2524336576462 },
+  { id: 28, nombre: "Zona Gamer Altamira", longitud: 12.117486643271668, latitud: -86.25193476676942 },
+  { id: 28.5, nombre: "Tip Top Altamira", longitud: 12.117601964425845, latitud: -86.25174164772034 },
+  ////////////////
+  { id: 29, nombre: "Centro Comercial", longitud: 12.117518094500479, latitud: -86.25000894069673 },
+  { id: 29.5, nombre: "Centro Comercial", longitud: 12.118414452963234, latitud: -86.24927401542664 },
+  { id: 30, nombre: "Hosp. Manolo Morales", longitud: 12.120527050630086, latitud: -86.24591052532196 },
+  { id: 30.5, nombre: "Hosp. Manolo Morales", longitud: 12.12100929690266, latitud: -86.24578714370728 },
+  { id: 31, nombre: "Mercado Huembes", longitud: 12.122792622242592, latitud: -86.2430512905121 },
+  { id: 31.5, nombre: "Mercado Huembes", longitud: 12.12384097368869, latitud: -86.2422788143158 },
+  { id: 32, nombre: "Ferreteria Jenny", longitud: 12.126227511278682, latitud: -86.23895287513734 },
+  { id: 32.5, nombre: "Ferreteria Jenny", longitud: 12.126390165633222, latitud: -86.23912990093233 },
+  ////Esta no tiene al frente
+  { id: 33, nombre: "Nicarao", longitud: 12.12803167627683, latitud: -86.23486518859865 },
+  { id: 34, nombre: "Puente de Rubenia", longitud: 12.128519635741158, latitud: -86.23338460922243 },
+  { id: 34.5, nombre: "Puente de Rubenia", longitud: 12.128708523035973, latitud: -86.23356699943542 },
+  { id: 35, nombre: "Paso a desnivel Rubenia", longitud: 12.132521285980543, latitud: -86.23017668724061 },
+  { id: 35.5, nombre: "Paso a desnivel Rubenia", longitud: 12.132043827444933, latitud: -86.23072922229768 },
+  { id: 36, nombre: "UCYT", longitud: 12.135422746380447, latitud: -86.2289482355118 },
+  { id: 36.5, nombre: "UCYT", longitud: 12.136020873529862, latitud: -86.22905015945435 },
+  { id: 37, nombre: "Semaforos Villa Progreso", longitud: 12.138257730252771, latitud: -86.22708227887587 },
+  { id: 37.5, nombre: "Semaforos Villa Progreso", longitud: 12.138355664375043, latitud: -86.22707029149399 },
+  { id: 38, nombre: "UNI-RUPAP", longitud: 12.138269017064244, latitud: -86.22399151325226 },
+  { id: 38.5, nombre: "UNI-RUPAP", longitud: 12.138410677365473, latitud: -86.22398614883424 },
+  { id: 39, nombre: "Bar Doña Thel", longitud: 12.138379429808275, latitud: -86.22187793254852 },
+  { id: 39.5, nombre: "Bar Doña Thel", longitud: 12.138526336725, latitud: -86.22196912765504 },
+  { id: 40, nombre: "UPOLI", longitud: 12.138211411064564, latitud: -86.21975898742677 },
+  { id: 40.5, nombre: "UPOLI", longitud: 12.138384551459945, latitud: -86.21988236904146 },
+  { id: 41, nombre: "Rafaela Herrera", longitud: 12.137225456665405, latitud: -86.21667444705963 },
+  { id: 41.5, nombre: "Rafaela Herrera", longitud: 12.137660932390437, latitud: -86.21667444705963 },
+  { id: 42, nombre: "Miguel Gutierrez", longitud: 12.141223411889486, latitud: -86.21520459651947 },
+  { id: 42.5, nombre: "Miguel Gutierrez", longitud: 12.141559195423307, latitud: -86.21538162231445 },
+  { id: 43, nombre: "Zona Franca Dasol", longitud: 12.144004106514233, latitud: -86.21394395828248 },
+  { id: 43.5, nombre: "Zona Franca Dasol", longitud: 12.144187736269224, latitud: -86.2141263484955 },
+  { id: 44, nombre: "Taller Conrado", longitud: 12.146632623224102, latitud: -86.21357381343843 },
+  { id: 44.5, nombre: "Taller Conrado", longitud: 12.14676378605276, latitud: -86.21390104293825 },
+  { id: 45, nombre: "Semaforos del Dancing", longitud: 12.14851086876666, latitud: -86.21420681476593 },
+  { id: 45.5, nombre: "Semaforos del Dancing", longitud: 12.148652523619255, latitud: -86.21458768844606 },
+  { id: 46, nombre: "AGCO", longitud: 12.149298049776258, latitud: -86.21301591396333 },
+  ///////Otra rara
+  { id: 46.5, nombre: "ESCASAN", longitud: 12.149654808946426, latitud: -86.21301591396333 },
+  { id: 47, nombre: "Waspan", longitud: 12.148773403069052, latitud: -86.2085258960724 },
+  { id: 47.5, nombre: "Bomberos Waspan", longitud: 12.149292803314319, latitud: -86.2082362174988 },
+  { id: 48, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.148558459927537, latitud: -86.20315074920654 },
+  { id: 48.5, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.14878930479257, latitud: -86.20252847671509 },
+  { id: 49, nombre: "La Rocargo", longitud: 12.148112658365225, latitud: -86.19877879321852 },
+  { id: 49.5, nombre: "La Rocargo", longitud: 12.148558609239377, latitud: -86.19999115169328 },
+  { id: 50, nombre: "Policia Distrito VI", longitud: 12.146754426994882, latitud: -86.19529724121095 },
+  { id: 50.5, nombre: "Policia Distrito VI", longitud: 12.146749180482791, latitud: -86.19512557983398 },
+  { id: 51, nombre: "Los Rieles", longitud: 12.14176165938883, latitud: -86.1956298351288 },
+  { id: 51.5, nombre: "Los Rieles", longitud: 12.141677713608864, latitud: -86.19550108909607 },
+  { id: 52, nombre: "Concepcion de Maria", longitud: 12.13959470555254, latitud: -86.19620644195616 },
+  { id: 52.5, nombre: "Concepcion de Maria", longitud: 12.13953699236211, latitud: -86.19604550941527 },
+  { id: 53, nombre: "Pista el Mayoreo", longitud: 12.136960872671992, latitud: -86.19729005439818 },
+  { id: 53.5, nombre: "Pista el Mayoreo", longitud: 12.137307154975716, latitud: -86.19691990955413 },
+  { id: 54, nombre: "Parque Concepcion de Maria", longitud: 12.133889712605635, latitud: -86.19785606861116 },
+  { id: 54.5, nombre: "Parque Concepcion de Maria", longitud: 12.134157297509475, latitud: -86.19773805141449 },
+  { id: 55, nombre: "Mercado Mayoreo", longitud: 12.13495460864689, latitud: -86.19439065456392 },
+  { id: 55.5, nombre: "Mercado Mayoreo", longitud: 12.13498608911197, latitud: -86.19466423988344 }
+]
 
 //////////////////// FUNCIONALIDADES SUELTAS ///////////////////////
 
@@ -1714,13 +1807,44 @@ markerRUPAP.bindPopup("Villa Progreso/RUPAP").openPopup();
 
 // Captar las coordenadas al dar click en un punto
 
-mapa.on('click', function(event) {
+mapa.on('click', function (event) {
   var latitud = event.latlng.lat;
   var longitud = event.latlng.lng;
   console.log('Coordenadas: ' + latitud + ', ' + longitud);
 });
 
 ////////////////////////////////////////////////////////////////////
+
+/*------------------------ Funcion de Ubicacion Actual ---------------------*/
+var btnUbicacionActual = document.getElementById("btn-ubicacionActual");
+
+btnUbicacionActual.addEventListener("click", function () {
+  var UbicacionInicial = document.getElementById("UbicacionI");
+  UbicacionInicial.value = "Mi Ubicacion Actual";
+
+  // var latitud = geoplugin_latitude();
+  // var longitud = geoplugin_longitude();
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(function (position) {
+  //     var latitud = position.coords.latitude;
+  //     var longitud = position.coords.longitude;
+  //     console.log(latitud)
+  //     console.log(longitud)
+
+  // Crea un marcador en tu ubicación y añádelo al mapa
+  var marker = L.marker([12.109951220893143, -86.2246329946382]).addTo(mapa);
+  /*latitud*/ /*longitud*/
+  marker.bindPopup("¡Estás aquí!").openPopup();
+  // Vuela hacia tu ubicación con una animación
+  mapa.flyTo([12.109951220893143, -86.2246329946382], 13);
+  /*latitud*//*longitud*/
+  //   });
+  // } else {
+  //   console.log('La geolocalización no es compatible en este navegador.');
+  // }
+
+})
+
 
 /*--------------------------- Funcion Buscar Ruta ------------------------- */
 
@@ -1740,6 +1864,22 @@ document.getElementById("Busqueda").addEventListener("click", function () {
         color: "purple"
       }
     }).addTo(mapa)
+
+    ///Para poner circulos en las paradas
+    // Recorrer los elementos del objeto Paradas104
+    for (var i = 0; i < Paradas104.length; i++) {
+      var parada = Paradas104[i];
+      var longitud = parada.longitud;
+      var latitud = parada.latitud;
+
+      // Crear un marcador en las coordenadas de cada elemento
+      var paradas = L.circle([longitud, latitud], {
+        radius: 25,
+        fillColor: "red",
+        fillOpacity: 0.5,
+      }).addTo(mapa);
+    }
+
 
   } else {
     alert("Debe llenar el cuadro de busqueda");
