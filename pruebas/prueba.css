@@ -246,7 +246,7 @@ cursor: auto;
 
 .submenuBuscar{
   display: none;
-  max-height: 400px;
+  max-height: 420px;
 }
 
 .submenuBuscar #txtBusqueda{
@@ -315,7 +315,7 @@ margin-top: 5px;
 }
 
 #Resultados{
-  max-height: 350px;
+  max-height: 370px;
 }
 
 .TodasLasParadas{
@@ -330,6 +330,7 @@ margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
   max-height: 400px;
+  margin-bottom: 10px;
 }
 
 .PuntosRuta .Parada{
@@ -369,7 +370,7 @@ margin-top: 5px;
   font-size: 25px;
   font-weight: bolder;
   bottom: 5px;
-  width: 30%;
+  width: 100%;
   min-width: 250px;
 }
 
