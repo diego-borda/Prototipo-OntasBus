@@ -1768,6 +1768,7 @@ var Paradas104 = [
   ///////Otra rara
   { id: 46.5, nombre: "ESCASAN", longitud: 12.149654808946426, latitud: -86.21301591396333 },
   { id: 47, nombre: "Waspan", longitud: 12.148773403069052, latitud: -86.2085258960724 },
+    ///////Otra rara
   { id: 47.5, nombre: "Bomberos Waspan", longitud: 12.149292803314319, latitud: -86.2082362174988 },
   { id: 48, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.148558459927537, latitud: -86.20315074920654 },
   { id: 48.5, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.14878930479257, latitud: -86.20252847671509 },
@@ -1789,12 +1790,11 @@ var Paradas104 = [
 
 //////////////////// FUNCIONALIDADES SUELTAS ///////////////////////
 
-// Define el ícono personalizado
 const IconBusIzq = L.icon({
   iconUrl: '../images/IconoBus--Izquierda.png',
-  iconSize: [100, 100], // Tamaño del ícono en píxeles
-  iconAnchor: [16, 32], // Punto de anclaje del ícono
-  popupAnchor: [0, -32] // Punto de anclaje del popup
+  iconSize: [32, 32], // Tamaño del ícono en píxeles
+  // iconAnchor: [16, 32], // Punto de anclaje del ícono
+  // popupAnchor: [0, -32] // Punto de anclaje del popup
 });
 
 // Crea un marcador con el ícono personalizado
