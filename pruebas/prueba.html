@@ -10,9 +10,9 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <!-- <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" 
+  <!-- <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" 
     type="text/javascript"></script> -->
-  </head>
+</head>
 
 <body>
   <input type="checkbox" id="check">
@@ -80,7 +80,8 @@
             <div class="DireccionBus">
               <span class="Opcion1">
                 <strong>De:</strong> Hialeah <strong>A:</strong> Mercado Mayoreo
-                <div class="color" style="background-color: purple; border-radius: 100%; height: 15px; width: 15px;"></div>
+                <div class="color" style="background-color: purple; border-radius: 100%; height: 15px; width: 15px;">
+                </div>
               </span>
               <span class="Opcion2">
                 <strong>De:</strong> Mercado Mayoreo <strong>A:</strong> Hialeah
@@ -88,38 +89,851 @@
                   style="background-color: rgb(4, 195, 4); border-radius: 100%; height: 15px; width: 15px;"></div>
               </span>
             </div>
-            <div class="PuntosRuta">
-              <div class="Parada">
-                <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
-                  <strong>Barrio Hialeah</strong>
-                </span>
+            <div class="TodasLasParadas">
+              <!-- ------------------ Primer Parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Hialeah</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
               </div>
-              <div class="ProxBus">
-                <span>Prox. Bus: </span>
-                <span style="color: purple">0 min</span>
-                <span style="color: rgb(4, 195, 4);">10 min</span>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Rosa de Saron</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
               </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Entrada</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Benito Juarez</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Salida a Pista Suburbana</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Pulperia La Pista</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Cementerio El Carmen</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Barrio Memorial Sandino</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Bosques de Nejapa</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Hospedaje San Francisco</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Farmacia El Valle</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Universidad del Valle</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Rotonda El Periodista</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Edificios El Centro</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Edificio Naciones Unidas</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>LAFISE Plaza España</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Plaza España</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>PriceSmart</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Comercial Mabale</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Mirador Tiscapa</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>El Redentor</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Gancho de Camino</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Bar Santo Domingo</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Colegio Publico España</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Colegio Cristo Rey</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Clinica Ma. Auxiliadora</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Rotonda Cristo Rey</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Rotonda Santo Domingo</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Colonia Maximo Jerez</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Altamira</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Farmacity Altamira</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>CECA</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>De mi tierra</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Credifast Altamira</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Zona Gamer Altamira</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Tip Top Altamira"</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Centro Comercial</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Hosp. Manolo Morales</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Mercado Huembes</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Ferreteria Jenny</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Nicarao</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Puente de Rubenia</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Paso a desnivel Rubenia</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>UCYT</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Semaforos Villa Progreso</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>UNI-RUPAP</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Bar Doña Thel</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>UPOLI</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Rafaela Herrera</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Miguel Gutierrez</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Zona Franca Dasol</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Taller Conrado</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Semaforos del Dancing</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>AGCO</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>ESCASAN</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Waspan</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Bomberos Waspan</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Entrada Barrio Hugo Chavez</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>La Rocargo</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Policia Distrito VI</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Los Rieles</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Concepcion de Maria</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Pista el Mayoreo</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Parque Concepcion de Maria</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!-- ------------------ Otra parada -------------------------->
+              <div class="PuntosRuta">
+                <div class="Parada">
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
+                    <strong>Mercado Mayoreo</strong>
+                  </span>
+                </div>
+                <div class="ProxBus">
+                  <span>Prox. Bus: </span>
+                  <span style="color: purple">0 min</span>
+                  <span style="color: rgb(4, 195, 4);">10 min</span>
+                </div>
+              </div>
+              <!----------------------- Fin Paradas ------------------------------------>
             </div>
           </div>
         </div>
-      </li>
+  </div>
+  </li>
 
-      <!-- ------------------------- Alarmas -------------------------- -->
-      <li class="list__item list__item--click">
-        <div class="list__button list__button--click">
-          <a href="#"><i class="far fa-clock"></i>Alarmas
-            <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
-        </div>
-      </li>
-
-
-    </ul>
-    <div class="social_media">
-      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" style="color:blue"></i></a>
-      <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter" style="color:#00acee"></i></a>
-      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube" style="color:red"></i></a>
-      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin" style="color: #0e76a8;"></i></a>
+  <!-- ------------------------- Alarmas -------------------------- -->
+  <li class="list__item list__item--click">
+    <div class="list__button list__button--click">
+      <a href="#"><i class="far fa-clock"></i>Alarmas
+        <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
     </div>
+  </li>
+
+
+  </ul>
+  <div class="social_media">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" style="color:blue"></i></a>
+    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter" style="color:#00acee"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube" style="color:red"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin" style="color: #0e76a8;"></i></a>
+  </div>
   </div>
   <div class="main_content">
     <div id=header class="header">
@@ -181,16 +995,17 @@
           <li><a href="#" id="AyudaLink"><i class="fa fa-question-circle"></i>Ayuda</a><i class="fas fa-caret-down"></i>
             <div class="Submenu_Ayuda">
               <ul>
-                <li><a href="#" id="ComentariosLink"><i class="fas fa-question"></i>Preguntas Frecuentes</a><i class="fas fa-caret-down"></i>
-                <ul class="Submenu_Comentanos">
-                  <li><a href="#"><i class="fas fa-comment-alt" style="padding-right: 8px;"></i>Comentanos</a></li>
-                </ul>
+                <li><a href="#" id="ComentariosLink"><i class="fas fa-question"></i>Preguntas Frecuentes</a><i
+                    class="fas fa-caret-down"></i>
+                  <ul class="Submenu_Comentanos">
+                    <li><a href="#"><i class="fas fa-comment-alt" style="padding-right: 8px;"></i>Comentanos</a></li>
+                  </ul>
                 </li>
                 <li><a href="#" id="ReportarProblemasLink"><i class="fas fa-headset"></i>Soporte Tecnico</a><i
-                  class="fas fa-caret-down"></i>
-                <ul class="Submenu_ReportarProblemas">
-                  <li><a href="#" ><i class="fas fa-bug" style="padding-right: 8px;"></i>Reportar Problemas</a></li>
-                </ul>
+                    class="fas fa-caret-down"></i>
+                  <ul class="Submenu_ReportarProblemas">
+                    <li><a href="#"><i class="fas fa-bug" style="padding-right: 8px;"></i>Reportar Problemas</a></li>
+                  </ul>
                 </li>
                 <li><a href="#" id="TutorialesLink"><i class="fas fa-eye"></i>Tutoriales</a><i
                     class="fas fa-caret-down"></i>
@@ -209,7 +1024,7 @@
     </div>
     <div id="Contenido">
       <div id="Mapa">
-        
+
       </div>
     </div>
   </div>

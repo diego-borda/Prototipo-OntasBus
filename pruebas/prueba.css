@@ -246,7 +246,7 @@ cursor: auto;
 
 .submenuBuscar{
   display: none;
-
+  max-height: 400px;
 }
 
 .submenuBuscar #txtBusqueda{
@@ -282,7 +282,7 @@ cursor: auto;
   margin-bottom: 7px; 
 }
 
-.DireccionBus .PuntosRuta{
+.PuntosRuta{
   background-color: white;
 }
 
@@ -314,12 +314,22 @@ margin-top: 5px;
 margin-top: 5px;
 }
 
+#Resultados{
+  max-height: 350px;
+}
+
+.TodasLasParadas{
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
 .PuntosRuta{
   display: flex;
   flex-direction: row;
   background-color: white;
   margin-right: 5px;
   margin-left: 5px;
+  max-height: 400px;
 }
 
 .PuntosRuta .Parada{
@@ -329,6 +339,7 @@ margin-top: 5px;
   padding-top: 20px;
   border-right: gray 2px solid;
   width: 65%;
+  max-height: fit-content;
 }
 
 .PuntosRuta .ProxBus{
@@ -358,7 +369,7 @@ margin-top: 5px;
   font-size: 25px;
   font-weight: bolder;
   bottom: 5px;
-  width: 100%;
+  width: 30%;
   min-width: 250px;
 }
 
