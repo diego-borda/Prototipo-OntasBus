@@ -1802,8 +1802,8 @@ var markerBus104 = L.marker([12.138255, -86.219000], { icon: IconBusIzq }).addTo
 markerBus104.bindPopup("Prox: 5min").openPopup();
 
 // Parada en el RUPAP
-var markerRUPAP = L.marker([12.138422, -86.224045]).addTo(mapa);
-markerRUPAP.bindPopup("Villa Progreso/RUPAP").openPopup();
+// var markerRUPAP = L.marker([12.138422, -86.224045]).addTo(mapa);
+// markerRUPAP.bindPopup("Villa Progreso/RUPAP").openPopup();
 
 // Captar las coordenadas al dar click en un punto
 
@@ -1812,6 +1812,9 @@ mapa.on('click', function (event) {
   var longitud = event.latlng.lng;
   console.log('Coordenadas: ' + latitud + ', ' + longitud);
 });
+
+//   Funcion para eliminar del mapa
+//   L.geoJSON(ParadasRuta104MM_H__GEOJsonLine,{}).removeFrom(mapa)
 
 ////////////////////////////////////////////////////////////////////
 
@@ -1846,7 +1849,7 @@ btnUbicacionActual.addEventListener("click", function () {
 })
 
 
-/*--------------------------- Funcion Buscar Ruta ------------------------- */
+/*--------------------------- Funcion Buscar Ruta --------------------------*/
 
 document.getElementById("Busqueda").addEventListener("click", function () {
   if (document.getElementById("txtBuscar").value.trim() !== "") {
@@ -1887,5 +1890,35 @@ document.getElementById("Busqueda").addEventListener("click", function () {
 
 })
 
-//   Funcion para eliminar del mapa
-//   L.geoJSON(ParadasRuta104MM_H__GEOJsonLine,{}).removeFrom(mapa)
+/*--------------------------- Funcion resaltar punto en el mapa al dar click en el menu --------------------------*/
+
+// Obtiene todos los elementos con la clase 'far fa-dot-circle' dentro de 'PuntosRuta'
+var elementosMenu = document.querySelectorAll('.PuntosRuta .far.fa-dot-circle');
+
+// Asigna el controlador de eventos a cada elemento del menú
+elementosMenu.forEach(function (elemento) {
+  elemento.addEventListener('click', function () {
+    var nombre = this.getAttribute('data-nombre');
+    resaltarPunto(nombre);
+
+    document.querySelector(".fa-dot-circle").classList.remove("far");
+    document.querySelector(".fa-dot-circle").classList.add("fas");
+  
+    // Cambiar el color de fondo a gris
+    document.querySelector(".PuntosRuta").style["background-color"] = "grey";
+  });
+});
+
+
+function resaltarPunto(nombre) {
+  // Recorre los puntos de interés para encontrar el punto correspondiente al nombre
+  for (var i = 0; i < Paradas104.length; i++) {
+    if (Paradas104[i].nombre === nombre) {
+      var punto = Paradas104[i];
+      var marcador = L.marker([punto.longitud, punto.latitud], { style:{color: "red" }}).addTo(mapa);
+      marcador.bindPopup(punto.nombre).openPopup();
+      mapa.flyTo([punto.longitud,punto.latitud],16);
+      break; // Termina el ciclo cuando se encuentra el punto correspondiente
+    }
+  }
+}
