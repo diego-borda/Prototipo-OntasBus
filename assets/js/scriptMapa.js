@@ -1805,14 +1805,6 @@ markerBus104.bindPopup("Prox: 5min").openPopup();
 // var markerRUPAP = L.marker([12.138422, -86.224045]).addTo(mapa);
 // markerRUPAP.bindPopup("Villa Progreso/RUPAP").openPopup();
 
-// Captar las coordenadas al dar click en un punto
-
-mapa.on('click', function (event) {
-  var latitud = event.latlng.lat;
-  var longitud = event.latlng.lng;
-  console.log('Coordenadas: ' + latitud + ', ' + longitud);
-});
-
 //   Funcion para eliminar del mapa
 //   L.geoJSON(ParadasRuta104MM_H__GEOJsonLine,{}).removeFrom(mapa)
 
