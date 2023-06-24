@@ -1768,7 +1768,7 @@ var Paradas104 = [
   ///////Otra rara
   { id: 46.5, nombre: "ESCASAN", longitud: 12.149654808946426, latitud: -86.21301591396333 },
   { id: 47, nombre: "Waspan", longitud: 12.148773403069052, latitud: -86.2085258960724 },
-    ///////Otra rara
+  ///////Otra rara
   { id: 47.5, nombre: "Bomberos Waspan", longitud: 12.149292803314319, latitud: -86.2082362174988 },
   { id: 48, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.148558459927537, latitud: -86.20315074920654 },
   { id: 48.5, nombre: "Entrada Barrio Hugo Chavez", longitud: 12.14878930479257, latitud: -86.20252847671509 },
@@ -1869,6 +1869,9 @@ document.getElementById("Busqueda").addEventListener("click", function () {
     }).addTo(mapa)
 
     ///Para poner circulos en las paradas
+
+    // Se crea un arreglo para almacenar los marcadores de las paradas
+    var paradas = [];
     // Recorrer los elementos del objeto Paradas104
     for (var i = 0; i < Paradas104.length; i++) {
       var parada = Paradas104[i];
@@ -1876,13 +1879,25 @@ document.getElementById("Busqueda").addEventListener("click", function () {
       var latitud = parada.latitud;
 
       // Crear un marcador en las coordenadas de cada elemento
-      var paradas = L.circle([longitud, latitud], {
+      var paradaMarker = L.circle([longitud, latitud], {
         radius: 25,
         fillColor: "red",
         fillOpacity: 0.5,
       }).addTo(mapa);
-    }
 
+      paradas.push(paradaMarker);
+    }
+    /////Cambbiandole el radio a circulo al hacer zoom en el mapa
+    mapa.on('zoomend', function () {
+      var zoomLevel = mapa.getZoom(); // Obtener el nivel de zoom actual
+      var scaleFactor = 1 - (zoomLevel * 0.03); // Calcular el factor de escala basado en el nivel de zoom
+
+      for (var j = 0; j < paradas.length; j++) {
+        var paradaMarker = paradas[j];
+        var newRadius = 25 * scaleFactor; // Calcular el nuevo radio del círculo
+        paradaMarker.setRadius(newRadius); // Actualizar el radio del círculo
+      }
+    });
 
   } else {
     alert("Debe llenar el cuadro de busqueda");
@@ -1890,35 +1905,57 @@ document.getElementById("Busqueda").addEventListener("click", function () {
 
 })
 
+
 /*--------------------------- Funcion resaltar punto en el mapa al dar click en el menu --------------------------*/
 
 // Obtiene todos los elementos con la clase 'far fa-dot-circle' dentro de 'PuntosRuta'
-var elementosMenu = document.querySelectorAll('.PuntosRuta .far.fa-dot-circle');
-
+var elementosMenu = document.querySelectorAll('.PuntosRuta .Parada');
 // Asigna el controlador de eventos a cada elemento del menú
 elementosMenu.forEach(function (elemento) {
   elemento.addEventListener('click', function () {
     var nombre = this.getAttribute('data-nombre');
     resaltarPunto(nombre);
 
-    document.querySelector(".fa-dot-circle").classList.remove("far");
-    document.querySelector(".fa-dot-circle").classList.add("fas");
-  
-    // Cambiar el color de fondo a gris
-    document.querySelector(".PuntosRuta").style["background-color"] = "grey";
   });
 });
 
+var marcadoresResaltados = [];
+var elementoSeleccionado = null;
 
 function resaltarPunto(nombre) {
+  // Restablecer el marcador previamente resaltado
+  for (var i = 0; i < marcadoresResaltados.length; i++) {
+    mapa.removeLayer(marcadoresResaltados[i]);
+  }
+  marcadoresResaltados = [];
+
+  // Restaurar el estado del elemento previamente seleccionado
+  if (elementoSeleccionado) {
+    var padrePrevio = elementoSeleccionado.parentNode;
+    var primerHijoPrevio = elementoSeleccionado.firstElementChild;
+    primerHijoPrevio.classList.remove("fas");
+    primerHijoPrevio.classList.add("far");
+    padrePrevio.style["background-color"] = "white";
+    elementoSeleccionado.style["background-color"] = "white";
+  }
+
   // Recorre los puntos de interés para encontrar el punto correspondiente al nombre
   for (var i = 0; i < Paradas104.length; i++) {
     if (Paradas104[i].nombre === nombre) {
       var punto = Paradas104[i];
-      var marcador = L.marker([punto.longitud, punto.latitud], { style:{color: "red" }}).addTo(mapa);
+      var marcador = L.marker([punto.longitud, punto.latitud], { style: { color: "red" } }).addTo(mapa);
       marcador.bindPopup(punto.nombre).openPopup();
-      mapa.flyTo([punto.longitud,punto.latitud],16);
-      break; // Termina el ciclo cuando se encuentra el punto correspondiente
+      mapa.flyTo([punto.longitud, punto.latitud], 16);
+      marcadoresResaltados.push(marcador);
+
+      // Actualizar el estado del nuevo elemento seleccionado
+      elementoSeleccionado = document.querySelector('[data-nombre="' + nombre + '"]');
+      var padreNuevo = elementoSeleccionado.parentNode;
+      var primerHijoNuevo = elementoSeleccionado.firstElementChild;
+      primerHijoNuevo.classList.remove("far");
+      primerHijoNuevo.classList.add("fas");
+      padreNuevo.style["background-color"] = "lightgray";
+      elementoSeleccionado.style["background-color"] = "lightgray";
     }
   }
 }
