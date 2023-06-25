@@ -1817,21 +1817,21 @@ btnUbicacionActual.addEventListener("click", function () {
   var UbicacionInicial = document.getElementById("UbicacionI");
   UbicacionInicial.value = "Mi Ubicacion Actual";
 
-  // var latitud = geoplugin_latitude();
-  // var longitud = geoplugin_longitude();
-  // if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(function (position) {
-  //     var latitud = position.coords.latitude;
-  //     var longitud = position.coords.longitude;
-  //     console.log(latitud)
-  //     console.log(longitud)
+mapboxgl.accessToken = 'pk.eyJ1IjoibWp2YWxlbnp1ZWxhIiwiYSI6ImNrb2Fmdm9zZDBpM28ybnFtYTQ2Z2MwMnYifQ.ZY3JTw0-6tjUSOOJXJHs dw';
 
+mapa.locate({ enableHighAccuracy: true, timeout: 5000 }).on('locationfound', function(e) {
+  var latitude = e.latitude;
+  var longitude = e.longitude;
+  console.log('Ubicación encontrada:', latitude, longitude);
+}).on('locationerror', function() {
+  console.log('No se pudo obtener la ubicación del usuario.');
+});
   // Crea un marcador en tu ubicación y añádelo al mapa
-  var marker = L.marker([12.109951220893143, -86.2246329946382]).addTo(mapa);
-  /*latitud*/ /*longitud*/
-  marker.bindPopup("¡Estás aquí!").openPopup();
-  // Vuela hacia tu ubicación con una animación
-  mapa.flyTo([12.109951220893143, -86.2246329946382], 13);
+  // var marker = L.marker([12.109951220893143, -86.2246329946382]).addTo(mapa);
+  // /*latitud*/ /*longitud*/
+  // marker.bindPopup("¡Estás aquí!").openPopup();
+  // // Vuela hacia tu ubicación con una animación
+  // mapa.flyTo([12.109951220893143, -86.2246329946382], 13);
   /*latitud*//*longitud*/
   //   });
   // } else {

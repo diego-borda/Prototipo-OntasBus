@@ -396,7 +396,7 @@ label #cancel {
   border: 1px solid black;
   padding: 20px;
   /* Agregamos el estilo de cursor para indicar que es arrastrable */
-  z-index: 3;
+  z-index: 10;
 }
 
 .popup-form .CabeceraForm {
@@ -411,6 +411,7 @@ label #cancel {
   padding-bottom: 2px;
   padding-left: 10px;
   cursor: move;
+  z-index: 100;
 }
 
 .CabeceraForm button {
@@ -841,20 +842,15 @@ label #cancel {
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 /*------ CONTENIDO ------*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
-
-#Contenido {
-
+ #Mapa {
+  
   width: 100%;
   height: 100%;
   width: auto;
-
-}
-
-#Contenido #Mapa {
   position: relative;
   width: 100%;
   height: 80vh;
-  z-index: -1;
+  z-index: 0;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
