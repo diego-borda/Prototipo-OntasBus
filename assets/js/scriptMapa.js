@@ -1951,3 +1951,42 @@ function resaltarPunto(nombre) {
     }
   }
 }
+
+///////////////////// Rellenar el select de la alarma dinamicamente //////////////////
+
+const select = document.getElementById("Posibparadas");
+const TerminalI = document.getElementById("TerminalI");
+
+var opcionSeleccionar = document.createElement('option');
+opcionSeleccionar.text = 'Seleccionar';
+opcionSeleccionar.value = 'Seleccionar';
+select.add(opcionSeleccionar, 0);
+
+TerminalI.addEventListener("change", function () {
+  const selected = TerminalI.value;
+  select.innerHTML = "";
+
+  if (selected === "Hialeah") {
+    for (var elemento of Paradas104) {
+      if (Number.isInteger(elemento.id)) {
+        var opcion = document.createElement("option");
+        opcion.value = elemento.nombre;
+        opcion.textContent = elemento.nombre;
+        select.appendChild(opcion);
+      } else {
+        continue;
+      }
+    }
+  } else if (selected === "Mercado Mayoreo") {
+    for (var elemento of Paradas104) {
+      if (!Number.isInteger(elemento.id)) {
+        var opcion = document.createElement("option");
+        opcion.value = elemento.nombre;
+        opcion.textContent = elemento.nombre;
+        select.appendChild(opcion);
+      } else {
+        continue;
+      }
+    }
+  }
+})

@@ -184,5 +184,48 @@ document.querySelector(".list__button--clickBusc").addEventListener("click", fun
   }
 });
 
+/*------------------------ Alarmas --------------------------*/
+function mostrarFormulario() {
+  document.getElementById("formularioEmergente").style.display = "block";
+}
 
+function ocultarFormulario() {
+  document.getElementById("formularioEmergente").style.display = "none";
+}
+
+// Obtener el elemento de la cabecera del formulario
+var cabeceraForm = document.querySelector('.CabeceraForm');
+
+// Variables para almacenar la posición inicial del formulario y el desplazamiento del arrastre
+var posInicialX = 0;
+var posInicialY = 0;
+var offsetX = 0;
+var offsetY = 0;
+
+// Función para iniciar el arrastre del formulario
+function iniciarArrastre(event) {
+  posInicialX = event.clientX;
+  posInicialY = event.clientY;
+  offsetX = posInicialX - formularioEmergente.offsetLeft;
+  offsetY = posInicialY - formularioEmergente.offsetTop;
+  document.addEventListener('mousemove', arrastrarFormulario);
+  document.addEventListener('mouseup', detenerArrastre);
+}
+
+// Función para arrastrar el formulario mientras se mueve el cursor
+function arrastrarFormulario(event) {
+  var nuevaPosX = event.clientX - offsetX;
+  var nuevaPosY = event.clientY - offsetY;
+  formularioEmergente.style.left = nuevaPosX + 'px';
+  formularioEmergente.style.top = nuevaPosY + 'px';
+}
+
+// Función para detener el arrastre del formulario
+function detenerArrastre() {
+  document.removeEventListener('mousemove', arrastrarFormulario);
+  document.removeEventListener('mouseup', detenerArrastre);
+}
+
+// Agregar el evento mousedown al header del formulario para iniciar el arrastre
+cabeceraForm.addEventListener('mousedown', iniciarArrastre);
 

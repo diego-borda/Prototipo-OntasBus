@@ -12,7 +12,7 @@ body {
   text-decoration: none;
 }
 
-.header .control-icon{
+.header .control-icon {
   margin-left: 50px;
 }
 
@@ -119,54 +119,54 @@ label #cancel {
 /*----- Direcciones -----*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 
-.list{
-  width:100%;
+.list {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  text-align:left;
+  text-align: left;
 }
 
 /*CHIVA POR AQUI*/
 /*-+-+//*-+-*+/*/
-.list__item{
+.list__item {
   width: 100%;
   overflow: hidden;
 }
 
-.list__item--click a{
+.list__item--click a {
   cursor: pointer;
 }
 
-.list__button{
+.list__button {
   display: flex;
   gap: 0.5em;
   width: 100%;
   margin-left: -10px;
 }
 
-.Submenu__Direcciones{
- display:none;
+.Submenu__Direcciones {
+  display: none;
   background-color: rgb(20, 99, 121);
   transition: all 0.9s ease;
 }
 
-#flechaDerecha{
+#flechaDerecha {
   transition: transform 0.5s ease;
 }
 
-.Selec_Puntos{
-display: flex;
-flex-direction: column;
-padding: 15px 10px 0px 10px;
+.Selec_Puntos {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px 0px 10px;
 }
 
-.Selec_Puntos input{
-margin-bottom: 10px;
-line-height: 20px;
+.Selec_Puntos input {
+  margin-bottom: 10px;
+  line-height: 20px;
 }
 
-.Selec_Puntos #btn-Buscar{
+.Selec_Puntos #btn-Buscar {
   width: 75px;
   margin-bottom: 5px;
   align-self: flex-end;
@@ -182,16 +182,16 @@ line-height: 20px;
 .Submenu__Direcciones .iconoYboton {
   border-bottom: 3px solid rgb(103, 58, 2);
 
-  }
-
-.Submenu__Direcciones .iconoYboton i{
-color: aqua;
-padding: 0 10px;
-font-size: 20px;
-cursor: auto;
 }
 
-.Submenu__Direcciones .iconoYboton #btn-ubicacionActual{
+.Submenu__Direcciones .iconoYboton i {
+  color: aqua;
+  padding: 0 10px;
+  font-size: 20px;
+  cursor: auto;
+}
+
+.Submenu__Direcciones .iconoYboton #btn-ubicacionActual {
   width: 81%;
   margin-bottom: 5px;
   align-self: flex-end;
@@ -202,29 +202,32 @@ cursor: auto;
   color: white;
   box-shadow: #e0e4e8;
   cursor: pointer;
-  }
-.textoYRecientes{
+}
+
+.textoYRecientes {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
 }
-  .textoYRecientes #span1{
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    font-weight: bolder;
-    background-color: rgb(199, 197, 197);
-    margin-bottom: 7px;
-  }
 
-  .Recientes{
-    border-top: 3px solid rgb(106, 106, 106);
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
+.textoYRecientes #span1 {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+  background-color: rgb(199, 197, 197);
+  margin-bottom: 7px;
+}
 
-.textoYRecientes .HeaderReciente span,.textoYRecientes .HeaderReciente span h3{
+.Recientes {
+  border-top: 3px solid rgb(106, 106, 106);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.textoYRecientes .HeaderReciente span,
+.textoYRecientes .HeaderReciente span h3 {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -234,7 +237,7 @@ cursor: auto;
   line-height: 25px;
 }
 
-.Recientes .ContenidoReciente{
+.Recientes .ContenidoReciente {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
@@ -244,27 +247,27 @@ cursor: auto;
 /*----- Buscar Ruta -----*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 
-.submenuBuscar{
+.submenuBuscar {
   display: none;
   max-height: 420px;
 }
 
-.submenuBuscar #txtBusqueda{
+.submenuBuscar #txtBusqueda {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin:0px;
+  margin: 0px;
   background-color: rgb(20, 99, 121);
 }
 
-.submenuBuscar #txtBusqueda input{
+.submenuBuscar #txtBusqueda input {
   width: 80%;
   margin-top: 10px;
   margin-left: 10px;
   max-height: 25px;
 }
 
-.submenuBuscar #txtBusqueda a{
+.submenuBuscar #txtBusqueda a {
   width: 20px;
   padding: 0;
   margin-right: -50px;
@@ -272,21 +275,21 @@ cursor: auto;
 }
 
 
-#Resultados #spanResult{
+#Resultados #spanResult {
   display: none;
   padding-top: 5px;
   padding-bottom: 10px;
   padding-left: 10px;
   font-weight: bolder;
   background-color: rgb(199, 197, 197);
-  margin-bottom: 7px; 
+  margin-bottom: 7px;
 }
 
-.PuntosRuta{
+.PuntosRuta {
   background-color: white;
 }
 
-.DireccionBus .Opcion1{
+.DireccionBus .Opcion1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -296,11 +299,11 @@ cursor: auto;
 
 }
 
-.DireccionBus .Opcion1 .color{
-margin-top: 5px;
+.DireccionBus .Opcion1 .color {
+  margin-top: 5px;
 }
 
-.DireccionBus .Opcion2{
+.DireccionBus .Opcion2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -310,20 +313,20 @@ margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.DireccionBus .Opcion2 .color{
-margin-top: 5px;
+.DireccionBus .Opcion2 .color {
+  margin-top: 5px;
 }
 
-#Resultados{
+#Resultados {
   max-height: 370px;
 }
 
-.TodasLasParadas{
+.TodasLasParadas {
   max-height: 400px;
   overflow-y: scroll;
 }
 
-.PuntosRuta{
+.PuntosRuta {
   display: flex;
   flex-direction: row;
   background-color: white;
@@ -333,7 +336,7 @@ margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.PuntosRuta .Parada{
+.PuntosRuta .Parada {
   display: flex;
   background-color: white;
   margin-left: 10px;
@@ -344,17 +347,159 @@ margin-top: 5px;
   cursor: pointer;
 }
 
-.PuntosRuta .ProxBus{
+.PuntosRuta .ProxBus {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
   text-align: center;
   margin-right: 0;
-  height:60px;
+  height: 60px;
 }
+
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
 /*------- Alarmas -------*/
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
+
+.submenuAlarmas .New {
+  background-color: gainsboro;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.New span i {
+  font-size: 25px;
+}
+
+.New span strong {
+  margin-left: 30px;
+  font-size: 25px;
+}
+
+/*----------------*/
+/*+++Formulario+++*/
+/*----------------*/
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: fit-content;
+  background: white;
+  border: 1px solid black;
+  padding: 20px;
+  /* Agregamos el estilo de cursor para indicar que es arrastrable */
+  z-index: 3;
+}
+
+.popup-form .CabeceraForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -20px;
+  background-color: #97dafc;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  cursor: move;
+}
+
+.CabeceraForm button {
+  margin-left: 330px;
+  background-color: #97dafc;
+  width: 20px;
+}
+
+.popup-form button {
+  margin-right: 3px;
+}
+
+.contenedorAlarma {
+  background-color: aliceblue;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.contenedorAlarma .RutaAbout {
+  border: #0a5275 1px solid;
+  padding-left: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.contenedorAlarma .selector {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.contenedorAlarma .DeA {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.contenedorAlarma .DeA #TerminalI {
+  margin-right: 15px;
+}
+
+.contenedorAlarma .CualParada {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.AlarmAbout {
+  margin-top: 15px;
+  border: #0a5275 1px solid;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 45px;
+  padding-left: 5px;
+}
+
+.AlarmAbout .Horas {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.AlarmAbout #AmPm {
+  margin-right: 15px;
+}
+
+.AlarmAbout .Sonar .Antes {
+  margin-bottom: 10px;
+}
+
+.AlarmAbout .Sonar .Tono {
+  margin-bottom: 10px;
+}
+
+.contenedorAlarma .Botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.contenedorAlarma .Botones :first-child{
+  margin-right: 20px;
+}
+
+.contenedorAlarma .Botones button{
+  width: 75px;
+  height: 25px;
+  background-color: #97dafc;
+}
 
 
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
@@ -420,7 +565,7 @@ margin-top: 5px;
 }
 
 .Logo {
-  padding-right: 10px;  
+  padding-right: 10px;
   width: fit-content;
   height: fit-content;
 }
@@ -440,7 +585,8 @@ margin-top: 5px;
   justify-content: space-between;
   margin-right: 10px;
   padding-inline: 15px;
-  position: relative; /*Aqui est no estaba*/
+  position: relative;
+  /*Aqui est no estaba*/
 }
 
 .Menu ul {
@@ -501,7 +647,7 @@ margin-top: 5px;
 
 .Menu .Submenu_Cuenta {
   top: 95%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   position: absolute;
   background-color: white;
@@ -534,19 +680,19 @@ margin-top: 5px;
   z-index: 2;
 }
 
-.Menu .SubMenu_History li{
+.Menu .SubMenu_History li {
   line-height: 30px;
 }
 
-.Menu .SubMenu_History li a{
+.Menu .SubMenu_History li a {
   display: inline-block;
   text-align: left;
   line-height: 20px;
 }
 
-.Menu .SubMenu_History li:last-child{
-margin-left: auto;
-padding-top: 10px;
+.Menu .SubMenu_History li:last-child {
+  margin-left: auto;
+  padding-top: 10px;
 }
 
 /*++++++++++++++++++++++*/
@@ -555,7 +701,7 @@ padding-top: 10px;
 
 .Menu .Submenu_AcercaDe {
   top: 95%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   position: absolute;
   background-color: white;
@@ -573,7 +719,7 @@ padding-top: 10px;
 
 .Menu .Submenu_Ayuda {
   top: 95%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   position: absolute;
   background-color: white;
@@ -606,19 +752,19 @@ padding-top: 10px;
   z-index: 2;
 }
 
-.Menu .Submenu_Comentarios li{
+.Menu .Submenu_Comentarios li {
   line-height: 30px;
 }
 
-.Menu .Submenu_Comentarios li a{
+.Menu .Submenu_Comentarios li a {
   display: inline-block;
   text-align: left;
   line-height: 20px;
 }
 
-.Menu .Submenu_Comentarios li:last-child{
-margin-left: auto;
-padding-top: 10px;
+.Menu .Submenu_Comentarios li:last-child {
+  margin-left: auto;
+  padding-top: 10px;
 }
 
 /*++++++++++++++*/
@@ -641,19 +787,19 @@ padding-top: 10px;
   z-index: 2;
 }
 
-.Menu .Submenu_ReportarProblemas li{
+.Menu .Submenu_ReportarProblemas li {
   line-height: 30px;
 }
 
-.Menu .Submenu_ReportarProblemas li a{
+.Menu .Submenu_ReportarProblemas li a {
   display: inline-block;
   text-align: left;
   line-height: 20px;
 }
 
-.Menu .Submenu_ReportarProblemas li:last-child{
-margin-left: auto;
-padding-top: 10px;
+.Menu .Submenu_ReportarProblemas li:last-child {
+  margin-left: auto;
+  padding-top: 10px;
 }
 
 /*++++++++++++++*/
@@ -677,19 +823,19 @@ padding-top: 10px;
   z-index: 2;
 }
 
-.Menu .Submenu_Tutoriales li{
+.Menu .Submenu_Tutoriales li {
   line-height: 30px;
 }
 
-.Menu .Submenu_Tutoriales li a{
+.Menu .Submenu_Tutoriales li a {
   display: inline-block;
   text-align: left;
   line-height: 20px;
 }
 
-.Menu .Submenu_Tutoriales li:last-child{
-margin-left: 0;
-padding-top: 10px;
+.Menu .Submenu_Tutoriales li:last-child {
+  margin-left: 0;
+  padding-top: 10px;
 }
 
 /*+-+-+-+-+-+-+-+-+-+-+-+*/
@@ -701,13 +847,14 @@ padding-top: 10px;
   width: 100%;
   height: 100%;
   width: auto;
-  
+
 }
 
-#Contenido #Mapa{
+#Contenido #Mapa {
+  position: relative;
   width: 100%;
   height: 80vh;
-  z-index: 0;
+  z-index: -1;
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
@@ -738,12 +885,12 @@ padding-top: 10px;
     border-bottom: 1px solid #e0e4e8;
   }
 
-  .header .control-icon{
+  .header .control-icon {
     margin-left: 30px;
     transition: all 1s;
   }
 
-  .Texto{
+  .Texto {
     margin-top: -10px;
   }
 
@@ -765,7 +912,7 @@ padding-top: 10px;
     justify-content: space-between;
   }
 
-  .Menu ul{
+  .Menu ul {
     justify-content: space-between;
 
   }
@@ -774,18 +921,18 @@ padding-top: 10px;
     margin-right: 5px;
     transition: all 1s;
   }
-  
+
   .Menu ul li:not(:first-child) {
     margin-left: 18px;
     /* Agrega un margen izquierdo de 15px a todos los elementos, excepto al primero */
   }
-  
+
   .Menu ul li:last-child {
     margin-right: 0;
     /* Elimina el margen derecho del último elemento */
   }
 
-  .Menu ul li > a {
+  .Menu ul li>a {
     font-weight: 0px;
     font-size-adjust: 0px;
     font-size: 0px;
@@ -793,7 +940,7 @@ padding-top: 10px;
     transition: all 0.8s;
   }
 
-  .Menu ul li a i{
+  .Menu ul li a i {
     font-size: 20px;
     color: blue;
   }

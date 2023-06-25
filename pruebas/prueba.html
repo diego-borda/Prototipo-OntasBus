@@ -901,7 +901,7 @@
               <!-- ------------------ Otra parada -------------------------->
               <div class="PuntosRuta">
                 <div class="Parada" data-nombre="Mercado Mayoreo">
-                  <span class="far fa-dot-circle" > <!--Al hacer click:fas fa-dot-circle-->
+                  <span class="far fa-dot-circle"> <!--Al hacer click:fas fa-dot-circle-->
                     <strong>Mercado Mayoreo</strong>
                   </span>
                 </div>
@@ -922,11 +922,112 @@
           <a href="#"><i class="far fa-clock"></i>Alarmas
             <i class="fas fa-caret-right" style="margin-left: 65px;"></i></a>
         </div>
-        
-        <div class="submenuAlarmas"> <!-- Rojo -->
-          <div class="New"> <!-- Azul -->
 
+        <div class="submenuAlarmas"> <!-- Rojo -->
+          <div class="New" onclick="mostrarFormulario()"> <!-- Azul -->
+            <span><i class="fas fa-plus"></i><strong>Nueva Alarma</strong></span>
           </div>
+          <!--------------- Formulario para setear alarmas --------------->
+          <div class="popup-form" id="formularioEmergente">
+            <!-- Botón de cerrar -->
+            <header class="CabeceraForm">
+              <h3>Editar Alarma</h3>
+              <button onclick="ocultarFormulario()"><i class="fas fa-times"></i></button>
+            </header>
+            <div class="contenedorAlarma">
+              <div class="RutaAbout">
+                <h6>Sobre la ruta:</h6>
+                <div class="selector">
+                  <label for="Ruta">Ruta: </label>
+                  <select id="selectRuta">
+                    <option value="">Elija</option>
+                    <option value="102">102</option>
+                    <option value="104">104</option>
+                    <option value="6">6</option>
+                    <option value="110">110</option>
+                    <option value="111">111</option>
+                    <option value="114">114</option>
+                    <option value="164">164</option>
+                    <option value="117">117</option>
+                    <option value="123">123</option>
+                    <option value="105">105</option>
+                    <option value="120">120</option>
+                    <option value="106">106</option>
+                    <option value="119">119</option>
+                    <option value="168">168</option>
+                  </select>
+                </div>
+                <div class="DeA">
+                  <label>De terminal:</label>
+                  <select id="TerminalI">
+                    <option value="">Seleccionar</option>
+                    <option value="Hialeah">Hialeah</option>
+                    <option value="Mercado Mayoreo">Mercado Mayoreo</option>
+                  </select>
+                  <label>A terminal:</label>
+                  <select id="TerminalF">
+                    <option value="">Seleccionar</option>
+                    <option value="Hialeah">Hialeah</option>
+                    <option value="Mercado Mayoreo">Mercado Mayoreo</option>
+                  </select>
+                </div>
+                <div class="CualParada">
+                  <label>Parada:</label>
+                  <select id="Posibparadas">
+
+                  </select>
+                </div>
+              </div>
+              <div class="AlarmAbout">
+                <h6>Sobre la alarma:</h6>
+                <div class="Horas">
+                  <label for="">Hora Inicio:</label>
+                  <input type="time" id="Hora Alarma">
+                  <select id="AmPm">
+                    <option value="Am">Am</option>
+                    <option value="Pm">Pm</option>
+                  </select>
+
+                  <label for="">Hora Fin:</label>
+                  <input type="time" id="Hora Alarma">
+                  <select id="AmPm">
+                    <option value="Am">Am</option>
+                    <option value="Pm">Pm</option>
+                  </select>
+                </div>
+                <div class="Sonar">
+                  <div class="Antes">
+                    <label>Sonar</label>
+                    <select name="" id="MinAntes">
+                      <option value="0">0</option>
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                    </select>
+                    <label>minutos antes</label>
+                  </div>
+                  <div class="Tono">
+                    <label>Tono:</label>
+                    <select id="Tonos">
+                      <option value="Emergency Siren">Emergency Siren</option>
+                      <option value="Alert Warning">Alert Warning</option>
+                      <option value="High Voltage">High Voltage</option>
+                      <option value="Panic Alarm">Panic Alarm</option>
+                      <option value="Alarm Bells">Alarm Bells</option>
+                      <option value="Nuclear Alert">Nuclear Alert</option>
+                      <option value="Red Alert">Red Alert</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Botones Aceptar y Cancelar -->
+              <div class="Botones">
+                <button>Aceptar</button>
+                <button onclick="ocultarFormulario()">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <!---------------- Fin Formulario --------------------------------------------->
           <div class="TodasLasAlarmas"> <!--Verde -->
             <div class="Alarma"> <!-- Purpura claro -->
               <div class="iconoYruta"> <!-- Naranja -->
@@ -948,7 +1049,7 @@
 
       </li>
     </ul>
-   
+
     <div class="social_media">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f" style="color:blue"></i></a>
       <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter" style="color:#00acee"></i></a>
