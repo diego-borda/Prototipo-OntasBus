@@ -1790,16 +1790,15 @@ var Paradas104 = [
 
 //////////////////// FUNCIONALIDADES SUELTAS ///////////////////////
 
-const IconBusIzq = L.icon({
-  iconUrl: '../images/IconoBus--Izquierda.png',
-  iconSize: [32, 32], // Tamaño del ícono en píxeles
-  // iconAnchor: [16, 32], // Punto de anclaje del ícono
-  // popupAnchor: [0, -32] // Punto de anclaje del popup
-});
+// const IconBusIzq = L.icon({
+
+//   iconSize: [32, 32], // Tamaño del ícono en píxeles
+//   // iconAnchor: [16, 32], // Punto de anclaje del ícono
+//   // popupAnchor: [0, -32] // Punto de anclaje del popup
+// });
 
 // Crea un marcador con el ícono personalizado
-var markerBus104 = L.marker([12.138255, -86.219000], { icon: IconBusIzq }).addTo(mapa);
-markerBus104.bindPopup("Prox: 5min").openPopup();
+
 
 // Parada en el RUPAP
 // var markerRUPAP = L.marker([12.138422, -86.224045]).addTo(mapa);
@@ -1817,17 +1816,9 @@ btnUbicacionActual.addEventListener("click", function () {
   var UbicacionInicial = document.getElementById("UbicacionI");
   UbicacionInicial.value = "Mi Ubicacion Actual";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWp2YWxlbnp1ZWxhIiwiYSI6ImNrb2Fmdm9zZDBpM28ybnFtYTQ2Z2MwMnYifQ.ZY3JTw0-6tjUSOOJXJHs dw';
 
-mapa.locate({ enableHighAccuracy: true, timeout: 5000 }).on('locationfound', function(e) {
-  var latitude = e.latitude;
-  var longitude = e.longitude;
-  console.log('Ubicación encontrada:', latitude, longitude);
-}).on('locationerror', function() {
-  console.log('No se pudo obtener la ubicación del usuario.');
-});
   // Crea un marcador en tu ubicación y añádelo al mapa
-  // var marker = L.marker([12.109951220893143, -86.2246329946382]).addTo(mapa);
+  var marker = L.marker([12.109951220893143, -86.2246329946382]).addTo(mapa);
   // /*latitud*/ /*longitud*/
   // marker.bindPopup("¡Estás aquí!").openPopup();
   // // Vuela hacia tu ubicación con una animación

@@ -113,8 +113,10 @@ document.getElementById("CerrarSesion").addEventListener("click", function () {
 /*---------------------- Mostrar y ocultar los submenu -----------------------*/
 var submenuDirecciones = document.querySelector(".Submenu__Direcciones");
 var submenuBuscar = document.querySelector(".submenuBuscar");
+var submenuAlarmas = document.querySelector(".submenuAlarmas");
 var flechaDer = document.getElementById("flechaDer");
 var flechaDerecha = document.getElementById("flechaDerecha");
+var flechaDere = document.getElementById("flechaDere");
 
 // if (submenuDirecciones.style.display !== "none") {
 
@@ -147,6 +149,12 @@ document.querySelector(".list__button--clickdirDirec").addEventListener("click",
       flechaDer.classList.remove("fa-caret-down");
       flechaDer.classList.add("fa-caret-right");
     }
+
+    if(submenuAlarmas.style.display !== "none") {
+      submenuAlarmas.style.display = "none";
+      flechaDer.classList.remove("fa-caret-down");
+      flechaDer.classList.add("fa-caret-right")
+    }
   } else {
     submenuDirecciones.style.display = "none";
     flechaDerecha.classList.remove("fa-caret-down");
@@ -175,6 +183,11 @@ document.querySelector(".list__button--clickBusc").addEventListener("click", fun
       flechaDerecha.classList.add("fa-caret-right");
     }
 
+    if(submenuAlarmas.style.display !== "none") {
+      submenuAlarmas.style.display = "none";
+      flechaDer.classList.remove("fa-caret-down");
+      flechaDer.classList.add("fa-caret-right")
+    }
   } else {
     submenuBuscar.style.display = "none";
     flechaDer.classList.remove("fa-caret-down");
@@ -183,6 +196,40 @@ document.querySelector(".list__button--clickBusc").addEventListener("click", fun
 
   }
 });
+
+// ------------------------  Submenu  alarmas ------------------------
+document.querySelector(".list__button--clickAla").addEventListener("click", function () {
+  if (submenuAlarmas.style.display === "none") {
+    submenuAlarmas.style.display = "flex";
+    submenuAlarmas.style.flexDirection = "column";
+
+    flechaDere.classList.remove("fa-caret-right");
+    flechaDere.classList.add("fa-caret-down");
+    // flechaDerecha.style.transition = "all .5s ease";
+    document.querySelector(".TodasLasAlarmas").style.display = "none";
+ 
+
+    if (submenuDirecciones.style.display !== "none") {
+      submenuDirecciones.style.display = "none";
+      flechaDerecha.classList.remove("fa-caret-down");
+      flechaDerecha.classList.add("fa-caret-right");
+    }
+
+    if (submenuBuscar.style.display !== "none") {
+      submenuBuscar.style.display = "none";
+      flechaDer.classList.remove("fa-caret-down");
+      flechaDer.classList.add("fa-caret-right");
+    
+    }
+  } else {
+    submenuAlarmas.style.display = "none";
+    flechaDere.classList.remove("fa-caret-down");
+    flechaDere.classList.add("fa-caret-right");
+    // flechaDerecha.style.transition = "all .5s ease";
+
+  }
+});
+
 
 /*------------------------ Alarmas --------------------------*/
 function mostrarFormulario() {

@@ -86,7 +86,7 @@ function EntrarAMain(event) {
     var email = document.getElementById("txtCorreo").value;
     var password = document.getElementById("txtContraseña").value;
     if (email !== "" && password !== "") {
-        window.location.href = "Main.html";
+        window.location.href = "../../pruebas/prueba.html";
 
     } else {
         alert("Por favor, completa todos los campos");
